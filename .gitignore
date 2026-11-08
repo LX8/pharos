@@ -1,0 +1,76 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+.venv-*/
+env/
+
+# Editor backups / IDE metadata
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+.claude/
+
+# Personal-but-project-specific AI memory (not for the repo)
+CLAUDE.local.md
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+
+# Large third-party raw downloads — fetched, not committed. Small pinned input
+# extracts live in data/snapshots/ under their upstream licences, and the derived
+# outputs in data/derived/ (see REUSE.toml).
+data/raw/
+data/cache/
+*.parquet
+*.sqlite
+*.db
+
+# local AI-assistant memory and agent files — machine-local, never project content
+AGENTS.md
+CLAUDE.md
+.cursorignore
+.codeiumignore
+
+# secrets and credentials — never commit
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+credentials.json
+service-account*.json
+service_account*.json
+.netrc
+.npmrc
+.pypirc
+.git-credentials
+*.tfstate
+
+# working files for founder-gated runs (bias-audit packs, etc.) — not committed until the dated report
+build/

@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: 2026 The Pharos contributors
+     SPDX-License-Identifier: CC-BY-SA-4.0 -->
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Pharos — Research observatory</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<aside class="sidebar">
+  <a class="brand" href="#overview" aria-label="Pharos home"><span class="beacon" aria-hidden="true">◒</span> pharos<span class="brand-sub">RESEARCH OBSERVATORY</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#overview" data-view="overview">Overview <span>01</span></a>
+    <a href="#evidence" data-view="evidence">Evidence ledger <span>02</span></a>
+    <a href="#signals" data-view="signals">Institutional signals <span>03</span></a>
+    <a href="#forecast" data-view="forecast">Forecast evaluation <span>04</span></a>
+    <a href="#lab" data-view="lab">Mechanism lab <span>05</span></a>
+    <a href="#verification" data-view="verification">Verification <span>06</span></a>
+  </nav>
+  <div class="sidebar-note"><span class="small-label">THE DESIGN RULE</span><p>Watch power.<br>Not people.</p><span>Science Against<br>Authoritarianism</span></div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><span>THE PHAROS PROJECT <span class="muted">/ Local observatory</span></span><span class="local-pill">● Offline research</span></header>
+  <main id="main" tabindex="-1">
+    <div id="loading" role="status">Loading the research…</div>
+    <div id="error" class="notice danger" role="alert" hidden><p id="error-message"></p><button id="retry">Try again</button></div>
+    <div id="app" hidden>
+      <section id="overview" class="view" aria-labelledby="overview-title">
+        <div class="eyebrow">01 / SCIENCE, WITH ITS LIMITS IN VIEW</div>
+        <h1 id="overview-title">A clearer view of<br><em>democratic resilience.</em></h1>
+        <p class="lede">Explore the evidence. Compare the instruments. Test the mechanisms.<br>Every result stays connected to its sources and uncertainty.</p>
+        <p class="snapshot" id="snapshot"></p>
+        <div class="stats" id="stats"></div>
+        <div class="two-column">
+          <article class="panel"><div class="small-label">THE MEASUREMENT FLOOR</div><h2>Most measured change<br>is within noise.</h2><p id="noise-description"></p><div id="noise-figures" class="figure-list"></div><a class="text-link" href="#signals">Compare the instruments →</a></article>
+          <article class="panel dark"><div class="small-label">A RESULT WORTH KEEPING</div><h2>The forecast has<br>not cleared its bar.</h2><p id="overview-verdict"></p><p>Negative findings remain part of the record. A working app does not make a model predictive.</p><a class="text-link" href="#forecast">Inspect the evaluation →</a></article>
+        </div>
+        <div class="section-heading"><h2>The research, open to inspection</h2><span>Read the source documents</span></div>
+        <div id="documents" class="document-grid"></div>
+      </section>
+      <section id="evidence" class="view" aria-labelledby="evidence-title" hidden>
+        <div class="eyebrow">02 / CLAIMS &amp; COUNTEREVIDENCE</div><h1 id="evidence-title">Evidence ledger</h1><p class="lede">Grades, sources and explicit conditions that would change each conclusion.</p>
+        <div class="filters"><label>Search evidence<input id="evidence-search" type="search" placeholder="Title, domain or entry ID…"></label><label>Evidence grade<select id="grade-filter"><option value="">All grades</option><option>ROBUST</option><option>CONTESTED</option><option>REFUTED</option><option>OPEN</option></select></label><label>Review status<select id="review-filter"><option value="">All entries</option><option value="due">Due within 90 days</option><option value="stale">Overdue</option></select></label><button id="evidence-reset" class="secondary">Clear filters</button></div>
+        <p class="muted">ROBUST: strong support in the ledger’s stated scope · CONTESTED: disputed · REFUTED: rejected · OPEN: unresolved. These grades remain subject to review.</p>
+        <p id="evidence-count" role="status"></p><div id="evidence-list" class="evidence-list"></div>
+      </section>
+      <section id="signals" class="view" aria-labelledby="signals-title" hidden>
+        <div class="eyebrow">03 / HISTORICAL INSTITUTIONAL MEASURES</div><h1 id="signals-title">Let disagreement show.</h1><p class="lede">World Bank WGI, V-Dem and Freedom House, side by side.<br>Different instruments and scales; no blended risk score.</p>
+        <div class="notice"><strong id="signals-window"></strong><p>WGI flags use a published 90% confidence interval. V-Dem and Freedom House flags use fixed change thresholds; they are not equivalent significance tests. Missing values remain missing.</p></div>
+        <div id="agreement-counts" class="chips"></div>
+        <div class="filters"><label>Search country or territory<input id="country-search" type="search" placeholder="Name or three-letter code…"></label><label>Instrument agreement<select id="agreement-filter"><option value="">All categories</option></select></label><button id="country-reset" class="secondary">Clear filters</button><a class="download" href="/downloads/divergence.csv" download>Export comparison CSV ↓</a></div>
+        <p id="country-count" role="status"></p><div class="table-wrap" tabindex="0" aria-label="Country comparison, scroll horizontally if needed"><table><caption class="sr-only">Changes over the historical window, in each instrument’s own scale</caption><thead><tr><th>Country / territory</th><th>WGI voice<br><small>0–100 scale</small></th><th>V-Dem expression<br><small>0–1 scale</small></th><th>Freedom House<br><small>0–60 scale</small></th><th>Agreement</th><th><span class="sr-only">Details</span></th></tr></thead><tbody id="country-rows"></tbody></table></div>
+        <details class="panel source-details"><summary>Sources, licenses and method</summary><div id="signal-sources"></div><a href="/downloads/governance.csv" download>Export all WGI dimensions ↓</a></details>
+      </section>
+      <section id="forecast" class="view" aria-labelledby="forecast-title" hidden>
+        <div class="eyebrow">04 / PRE-REGISTERED EVALUATION</div><h1 id="forecast-title">Does prediction add value?</h1><p class="lede">Compare every candidate with the no-change baseline.<br>Keep the negative result visible.</p>
+        <div class="notice"><strong id="forecast-verdict"></strong><p id="forecast-bar"></p></div>
+        <div class="filters"><label>Evaluation window<select id="forecast-window"><option value="backtest">Original backtest</option><option value="holdout">Held-out evaluation</option></select></label><a href="/downloads/forecast.json" download class="download">Export backtest ↓</a><a href="/downloads/holdout.json" download class="download">Export holdout ↓</a></div>
+        <p id="forecast-note"></p><p class="muted">CRPS measures distribution error; Brier measures probability error. Lower scores are better. Skill above zero improves on the no-change baseline. Passing the joint bar requires both metrics and calibration.</p>
+        <div class="table-wrap" tabindex="0" aria-label="Forecast scores"><table><caption class="sr-only">Forecast model scores and skill against no-change</caption><thead><tr><th>Model</th><th>CRPS ↓</th><th>Brier ↓</th><th>CRPS skill</th><th>Brier skill</th><th>Both skills &gt; 0?</th></tr></thead><tbody id="forecast-rows"></tbody></table></div>
+        <article class="panel calibration"><div class="section-heading"><h2>Calibration, in plain sight</h2><label>Model<select id="calibration-model"></select></label></div><p>Within each probability bin, compare the average predicted probability with the observed fraction. Small bins are noisy.</p><div class="table-wrap" tabindex="0" aria-label="Calibration bins"><table><thead><tr><th>Probability bin</th><th>Forecasts</th><th>Mean predicted</th><th>Observed fraction</th></tr></thead><tbody id="calibration-rows"></tbody></table></div></article>
+      </section>
+      <section id="lab" class="view" aria-labelledby="lab-title" hidden>
+        <div class="eyebrow">05 / REPRODUCIBLE MECHANISMS</div><h1 id="lab-title">Study the mechanism.</h1><p class="lede">Run the project’s existing model demonstrations locally.</p><div class="notice"><strong>Educational models with fixed synthetic inputs.</strong><p>Completion confirms that a demonstration ran. The verification suite tests its mathematical behavior. Neither establishes a causal effect in society or predicts an event.</p></div><button id="run-simulations" data-run="simulations" disabled aria-describedby="lab-run-message">Run all seven demonstrations</button><p id="lab-run-message" role="status" aria-live="polite">Checking local run status…</p><p><a href="#verification" class="text-link">View running checks and results →</a></p><div id="simulation-cards" class="simulation-grid"></div>
+      </section>
+      <section id="verification" class="view" aria-labelledby="verification-title" hidden>
+        <div class="eyebrow">06 / REAL EXECUTION, INSPECTABLE RESULTS</div><h1 id="verification-title">Put the work to the test.</h1><p class="lede">Recompute the historical indicators and forecast from pinned inputs.<br>Run the tests and research integrity checks, then inspect the receipt.</p>
+        <div class="panel run-panel"><div><h2>Complete offline verification</h2><p>Recomputation · unit tests · evidence structure and freshness · overstatement · counts · data boundaries · generated reports.</p><p class="muted">A passing run verifies these software checks. Scientific claims retain their evidence grades.</p></div><button id="run-verification" data-run="verify" disabled aria-describedby="run-message">Run verification</button></div>
+        <p id="run-message" role="status" aria-live="polite">No checks have run in this server session.</p>
+        <div id="runs"></div>
+      </section>
+    </div>
+    <footer><span>PHAROS <span class="muted">/ Evidence before confidence.</span></span><span>Local · Historical data · No tracking</span></footer>
+  </main>
+</div>
+<dialog id="reader" aria-labelledby="reader-title"><div class="reader-heading"><h2 id="reader-title"></h2><button id="reader-close" aria-label="Close reader">Close ×</button></div><div id="reader-body"></div></dialog>
+</body></html>

@@ -1,0 +1,7 @@
+model,crps,crps_skill,brier,brier_skill
+no_change,0.07719,0.0,0.21102,0.0
+trend,0.11656,-0.51,0.23362,-0.1071
+damped_trend,0.09041,-0.1712,0.21852,-0.0355
+reversion,0.07802,-0.0107,0.22692,-0.0753
+climatology,0.08965,-0.1614,0.19294,0.0857
+climatology_per_country,0.12204,-0.581,0.23619,-0.1193

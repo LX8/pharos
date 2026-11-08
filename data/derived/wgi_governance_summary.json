@@ -1,0 +1,521 @@
+{
+  "indicator_set": "World Bank WGI governance scores (0-100), six dimensions, with 90% CI",
+  "source": "World Bank Worldwide Governance Indicators (WGI), source 3",
+  "source_url": "https://www.worldbank.org/en/publication/worldwide-governance-indicators",
+  "fetched_utc": "2026-06-18T04:35:36+00:00",
+  "mode": "offline-snapshot",
+  "baseline_year": 2014,
+  "latest_year": 2024,
+  "input_provenance": {
+    "source_url": "https://api.worldbank.org/v2/country?format=json&per_page=400",
+    "fetched_utc": "2026-06-18T04:35:36+00:00",
+    "input_sha256": "sha256:a85671403308ea0ad50f6f1c8765ecb376624909eac4210f9993672ca09d8bbf"
+  },
+  "method": "Per-country, per-dimension decade change in the 0-100 score. SE derived from the published 90% CI (se=(ub-lb)/(2*1.6449)); two-sided z-test; flagged DECLINE/IMPROVE only when |z|>=1.6449 (90%). Moves within measurement noise are NOT flagged.",
+  "dimensions": {
+    "VA": {
+      "name": "Voice & Accountability",
+      "n_countries": 203,
+      "counts": {
+        "DECLINE": 33,
+        "IMPROVE": 6,
+        "NO_SIG_CHANGE": 164
+      },
+      "counts_95pct_bar": {
+        "DECLINE": 28,
+        "IMPROVE": 6
+      },
+      "global_unweighted_mean": {
+        "baseline": 56.892,
+        "latest": 54.95
+      },
+      "top_declines": [
+        {
+          "country": "Nicaragua",
+          "change": -19.1706,
+          "z": -5.446
+        },
+        {
+          "country": "Mali",
+          "change": -17.3183,
+          "z": -5.163
+        },
+        {
+          "country": "Tunisia",
+          "change": -14.405,
+          "z": -4.31
+        },
+        {
+          "country": "Afghanistan",
+          "change": -16.53,
+          "z": -4.276
+        },
+        {
+          "country": "Hong Kong SAR, China",
+          "change": -16.3932,
+          "z": -4.055
+        }
+      ],
+      "top_improvements": [
+        {
+          "country": "Gambia, The",
+          "change": 17.9825,
+          "z": 4.894
+        },
+        {
+          "country": "Sri Lanka",
+          "change": 9.954,
+          "z": 2.873
+        },
+        {
+          "country": "Uzbekistan",
+          "change": 8.6587,
+          "z": 2.398
+        },
+        {
+          "country": "Fiji",
+          "change": 11.2015,
+          "z": 2.253
+        },
+        {
+          "country": "Armenia",
+          "change": 8.642,
+          "z": 2.112
+        }
+      ]
+    },
+    "RL": {
+      "name": "Rule of Law",
+      "n_countries": 205,
+      "counts": {
+        "DECLINE": 13,
+        "IMPROVE": 13,
+        "NO_SIG_CHANGE": 179
+      },
+      "counts_95pct_bar": {
+        "DECLINE": 8,
+        "IMPROVE": 8
+      },
+      "global_unweighted_mean": {
+        "baseline": 55.908,
+        "latest": 55.996
+      },
+      "top_declines": [
+        {
+          "country": "Nicaragua",
+          "change": -12.2912,
+          "z": -3.552
+        },
+        {
+          "country": "Hong Kong SAR, China",
+          "change": -10.8974,
+          "z": -2.949
+        },
+        {
+          "country": "Mexico",
+          "change": -9.8231,
+          "z": -2.836
+        },
+        {
+          "country": "Myanmar",
+          "change": -9.6356,
+          "z": -2.722
+        },
+        {
+          "country": "Turkiye",
+          "change": -8.301,
+          "z": -2.384
+        }
+      ],
+      "top_improvements": [
+        {
+          "country": "Lithuania",
+          "change": 10.9048,
+          "z": 2.854
+        },
+        {
+          "country": "Saudi Arabia",
+          "change": 11.1001,
+          "z": 2.585
+        },
+        {
+          "country": "Gambia, The",
+          "change": 8.6078,
+          "z": 2.379
+        },
+        {
+          "country": "Zimbabwe",
+          "change": 7.5511,
+          "z": 2.34
+        },
+        {
+          "country": "Argentina",
+          "change": 8.2369,
+          "z": 2.33
+        }
+      ]
+    },
+    "CC": {
+      "name": "Control of Corruption",
+      "n_countries": 203,
+      "counts": {
+        "DECLINE": 9,
+        "IMPROVE": 17,
+        "NO_SIG_CHANGE": 177
+      },
+      "counts_95pct_bar": {
+        "DECLINE": 2,
+        "IMPROVE": 11
+      },
+      "global_unweighted_mean": {
+        "baseline": 46.275,
+        "latest": 47.103
+      },
+      "top_declines": [
+        {
+          "country": "Turkiye",
+          "change": -9.1959,
+          "z": -2.008
+        },
+        {
+          "country": "Malta",
+          "change": -10.9995,
+          "z": -1.99
+        },
+        {
+          "country": "Nicaragua",
+          "change": -8.8517,
+          "z": -1.894
+        },
+        {
+          "country": "Eritrea",
+          "change": -10.2903,
+          "z": -1.868
+        },
+        {
+          "country": "Cuba",
+          "change": -10.5031,
+          "z": -1.799
+        }
+      ],
+      "top_improvements": [
+        {
+          "country": "Saudi Arabia",
+          "change": 20.3165,
+          "z": 3.806
+        },
+        {
+          "country": "Angola",
+          "change": 17.4859,
+          "z": 3.539
+        },
+        {
+          "country": "Kazakhstan",
+          "change": 15.6949,
+          "z": 3.403
+        },
+        {
+          "country": "Armenia",
+          "change": 15.8634,
+          "z": 2.984
+        },
+        {
+          "country": "Moldova",
+          "change": 13.7259,
+          "z": 2.893
+        }
+      ]
+    },
+    "GE": {
+      "name": "Government Effectiveness",
+      "n_countries": 203,
+      "counts": {
+        "DECLINE": 7,
+        "IMPROVE": 4,
+        "NO_SIG_CHANGE": 192
+      },
+      "counts_95pct_bar": {
+        "DECLINE": 1,
+        "IMPROVE": 2
+      },
+      "global_unweighted_mean": {
+        "baseline": 52.617,
+        "latest": 52.052
+      },
+      "top_declines": [
+        {
+          "country": "Lebanon",
+          "change": -16.7901,
+          "z": -2.62
+        },
+        {
+          "country": "South Africa",
+          "change": -10.8367,
+          "z": -1.922
+        },
+        {
+          "country": "Syrian Arab Republic",
+          "change": -12.7611,
+          "z": -1.902
+        },
+        {
+          "country": "West Bank and Gaza",
+          "change": -16.0748,
+          "z": -1.899
+        },
+        {
+          "country": "Virgin Islands (U.S.)",
+          "change": -21.0302,
+          "z": -1.842
+        }
+      ],
+      "top_improvements": [
+        {
+          "country": "Moldova",
+          "change": 14.03,
+          "z": 2.217
+        },
+        {
+          "country": "Saudi Arabia",
+          "change": 13.7666,
+          "z": 2.141
+        },
+        {
+          "country": "Egypt, Arab Rep.",
+          "change": 10.635,
+          "z": 1.841
+        },
+        {
+          "country": "Azerbaijan",
+          "change": 11.5027,
+          "z": 1.802
+        }
+      ]
+    },
+    "RQ": {
+      "name": "Regulatory Quality",
+      "n_countries": 203,
+      "counts": {
+        "DECLINE": 7,
+        "IMPROVE": 7,
+        "NO_SIG_CHANGE": 189
+      },
+      "counts_95pct_bar": {
+        "DECLINE": 5,
+        "IMPROVE": 4
+      },
+      "global_unweighted_mean": {
+        "baseline": 54.142,
+        "latest": 54.348
+      },
+      "top_declines": [
+        {
+          "country": "Russian Federation",
+          "change": -9.7487,
+          "z": -2.291
+        },
+        {
+          "country": "Nicaragua",
+          "change": -9.2867,
+          "z": -2.23
+        },
+        {
+          "country": "Yemen, Rep.",
+          "change": -10.0088,
+          "z": -2.183
+        },
+        {
+          "country": "Turkiye",
+          "change": -9.1496,
+          "z": -2.179
+        },
+        {
+          "country": "Chile",
+          "change": -8.5662,
+          "z": -1.962
+        }
+      ],
+      "top_improvements": [
+        {
+          "country": "Uzbekistan",
+          "change": 14.8259,
+          "z": 3.583
+        },
+        {
+          "country": "Argentina",
+          "change": 12.2657,
+          "z": 2.852
+        },
+        {
+          "country": "Zimbabwe",
+          "change": 8.3515,
+          "z": 2.424
+        },
+        {
+          "country": "Bhutan",
+          "change": 10.0346,
+          "z": 2.172
+        },
+        {
+          "country": "Togo",
+          "change": 6.6511,
+          "z": 1.844
+        }
+      ]
+    },
+    "PV": {
+      "name": "Political Stability & Absence of Violence",
+      "n_countries": 205,
+      "counts": {
+        "DECLINE": 19,
+        "IMPROVE": 7,
+        "NO_SIG_CHANGE": 179
+      },
+      "counts_95pct_bar": {
+        "DECLINE": 11,
+        "IMPROVE": 6
+      },
+      "global_unweighted_mean": {
+        "baseline": 66.278,
+        "latest": 65.265
+      },
+      "top_declines": [
+        {
+          "country": "Burkina Faso",
+          "change": -20.609,
+          "z": -3.61
+        },
+        {
+          "country": "Mozambique",
+          "change": -19.4483,
+          "z": -3.501
+        },
+        {
+          "country": "Germany",
+          "change": -16.1079,
+          "z": -2.749
+        },
+        {
+          "country": "Mali",
+          "change": -15.3898,
+          "z": -2.693
+        },
+        {
+          "country": "Myanmar",
+          "change": -16.0508,
+          "z": -2.693
+        }
+      ],
+      "top_improvements": [
+        {
+          "country": "Ukraine",
+          "change": 26.6562,
+          "z": 4.621
+        },
+        {
+          "country": "Korea, Dem. People's Rep.",
+          "change": 22.6787,
+          "z": 3.693
+        },
+        {
+          "country": "South Sudan",
+          "change": 17.3112,
+          "z": 2.548
+        },
+        {
+          "country": "Timor-Leste",
+          "change": 15.1366,
+          "z": 2.404
+        },
+        {
+          "country": "Bahrain",
+          "change": 13.1234,
+          "z": 2.212
+        }
+      ]
+    }
+  },
+  "overall": {
+    "dimension_country_cells": 1222,
+    "meaningful_declines": 88,
+    "meaningful_improvements": 54,
+    "within_noise": 1080,
+    "decline_to_improve_ratio": 1.63
+  },
+  "va_robustness": {
+    "note": "Voice & Accountability decline:improve, at the 90% and 95% bars, for the primary window and an alternative in-snapshot window, plus a sweep over the assumed cross-year correlation rho (the headline uses rho=0, i.e. independence; WGI's overlapping sources make the true rho positive, and for a change test rho=0 is the conservative choice \u2014 it flags the fewest countries).",
+    "primary": {
+      "window": [
+        2014,
+        2024
+      ],
+      "n": 203,
+      "bar_90": {
+        "DECLINE": 33,
+        "IMPROVE": 6
+      },
+      "bar_95": {
+        "DECLINE": 28,
+        "IMPROVE": 6
+      }
+    },
+    "alt_window": {
+      "window": [
+        2015,
+        2024
+      ],
+      "n": 203,
+      "bar_90": {
+        "DECLINE": 30,
+        "IMPROVE": 6
+      },
+      "bar_95": {
+        "DECLINE": 22,
+        "IMPROVE": 4
+      }
+    },
+    "independence_sensitivity": [
+      {
+        "rho": 0.0,
+        "n": 203,
+        "decline": 33,
+        "improve": 6,
+        "decline_improve_ratio": 5.5
+      },
+      {
+        "rho": 0.3,
+        "n": 203,
+        "decline": 48,
+        "improve": 13,
+        "decline_improve_ratio": 3.69
+      },
+      {
+        "rho": 0.5,
+        "n": 203,
+        "decline": 57,
+        "improve": 16,
+        "decline_improve_ratio": 3.56
+      },
+      {
+        "rho": 0.7,
+        "n": 203,
+        "decline": 66,
+        "improve": 25,
+        "decline_improve_ratio": 2.64
+      },
+      {
+        "rho": 0.9,
+        "n": 203,
+        "decline": 88,
+        "improve": 37,
+        "decline_improve_ratio": 2.38
+      }
+    ]
+  },
+  "ethical_note": "Country/institution-level governance; watch power, not people (NOTICE \u00a77).",
+  "license": {
+    "code": "GPL-3.0-or-later",
+    "data": "CC0-1.0",
+    "wgi_terms": "WGI is freely available; cite the World Bank."
+  }
+}

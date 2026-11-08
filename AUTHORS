@@ -1,0 +1,43 @@
+Science Against Authoritarianism (Pharos) — AUTHORS
+===================================================
+
+Pharos is a project for the public, built for the good of humanity and
+the environment. It carries no personal credit: it is offered free of
+charge, and the people who build it seek no personal recognition. In
+copyright and license notices, the contributors are credited
+collectively as "The Pharos contributors".
+
+Contributions
+-------------
+
+All original contributions in this repository — the research
+synthesis, the framing of the four-lens analysis, the design of the
+proposed initiative, the methodology, the tools, and the original prose
+in all .md files — are by The Pharos contributors.
+
+Third-party datasets (the World Bank Worldwide Governance Indicators,
+V-Dem, Freedom House, and those the design proposes, such as ACLED,
+UCDP and GDELT), software dependencies, and cited peer-reviewed
+literature carry their own authorship and licensing and are not part
+of this AUTHORS list.
+
+AI-assisted development
+-----------------------
+
+The research synthesis and the tools were developed with AI assistance
+(Claude by Anthropic, and other AI coding assistants) under human
+direction. All retained claims, citations, and the public text of the
+deliverables are checked by a human contributor against cited,
+measured sources. AI assistants are not authors and hold no copyright
+in this work.
+
+Future contributors
+-------------------
+
+Contributions from third parties are accepted under the licenses
+mapped in LICENSE and REUSE.toml and the process in CONTRIBUTING.md. Contributors are credited collectively
+as "The Pharos contributors"; anyone who wishes to be named
+individually may add themselves to this file with their first merged
+contribution.
+
+-- end AUTHORS --

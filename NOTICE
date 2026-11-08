@@ -1,0 +1,136 @@
+Science Against Authoritarianism (Pharos) — NOTICE
+==================================================
+
+Copyright (c) 2026 The Pharos contributors
+
+Pharos is a project for the public, built for the good of humanity and
+the environment. It is offered free of charge, and its contributors
+seek no personal recognition; the attribution the licenses require
+goes to "The Pharos contributors". This NOTICE accompanies the
+LICENSE / LICENSES/ files, states what is original to the project, and
+sets out the project's ethical-use covenant (Section 7), which for a
+project of this subject matter is not an afterthought but the point.
+
+
+1. Original contributions
+-------------------------
+
+Original to this project (the licenses cover the written and coded
+expression of these, not the underlying ideas, methods or name):
+
+  (a) The four-lens framing of the question "what can science
+      measurably do to contain authoritarianism and political
+      violence" (epistemic defense; social science of violence;
+      systems & technology; political economy & institutions).
+
+  (b) The research synthesis and its evidentiary labelling — the
+      separation of replicated findings from contested and speculative
+      ones.
+
+  (c) The design of the proposed open-science initiative (its name,
+      mission, architecture, falsification protocol, and MVP) set out
+      in the report.
+
+  (d) The original prose of all .md deliverables in this repository,
+      including the README and the report.
+
+
+2. Not original / not subject to this notice
+--------------------------------------------
+
+  (a) Third-party open datasets analysed here (the World Bank
+      Worldwide Governance Indicators; V-Dem and Freedom House via Our
+      World in Data) and those the design proposes for later use
+      (ACLED, UCDP, GDELT, Polity), which retain their own authorship,
+      licenses, and citation requirements.
+
+  (b) Cited peer-reviewed literature and the findings of the
+      researchers named in the report, which retain their original
+      authorship and copyright.
+
+  (c) Software dependencies, which carry their own licenses.
+
+
+3. Attribution
+--------------
+
+What the licenses require: for the CC BY-SA 4.0 prose, credit, a link
+to the license, an indication of changes, and Share-Alike for
+adaptations; for the GPL-3.0-or-later code, keeping the copyright and
+license notices, providing the license, and marking modified versions;
+for the CC0 1.0 data, nothing (credit is appreciated, not required).
+Credit the project (and any contributor listed individually in AUTHORS
+who asks to be named): "Pharos — Science Against Authoritarianism, by
+The Pharos contributors (https://github.com/LX8/pharos)".
+
+
+4. AI / machine-learning training notice
+----------------------------------------
+
+Inclusion of this corpus in an AI/ML training dataset does not
+extinguish the license terms above. The project's position is that a
+model adapted from the CC BY-SA 4.0 prose is subject to its
+Share-Alike clause; whether a trained model is Adapted Material under
+CC BY-SA 4.0 is legally unsettled and depends on jurisdiction.
+
+
+5. Provenance
+-------------
+
+This public repository was published on 2026-11-08 as a verified
+snapshot of the project (see SNAPSHOT.md). Its earlier development
+history is not public.
+
+
+6. No endorsement
+-----------------
+
+Nothing in this repository may be used to claim that the project or
+its contributors endorse any political party, candidate, government,
+or movement. The unit of analysis is the *mechanism* of violence and
+democratic backsliding, not any partisan actor.
+
+
+7. Ethical use — the project's covenant
+---------------------------------------
+
+This project exists to defend open societies, scientific inquiry, and
+the dignity of all life against organised coercion. With that intent
+stated plainly, its contributors request that this work — its
+synthesis, its tools, its forecasts, and anything derived from them —
+never be used:
+
+  (a) to develop, target, justify, or operate violence or coercion
+      against any person or group;
+
+  (b) to build instruments of mass surveillance, predictive policing,
+      social scoring, watch-listing, or population control. The
+      early-warning and forecasting methods discussed here are
+      intended to flag *risk to populations and the conduct of power*
+      so that protective and accountability action can be taken — NOT
+      to monitor, score, profile, or pre-emptively act against
+      individuals. Inverting an early-warning tool into a targeting
+      tool is the precise abuse this covenant forbids;
+
+  (c) to suppress scientific inquiry, free expression, or the press,
+      or to persecute minorities, dissidents, migrants, or any
+      vulnerable group;
+
+  (d) to harm, endanger, or diminish any form of life, or to degrade
+      the ecosystems life depends on;
+
+  (e) to claim the project's endorsement of any such use.
+
+This is a covenant, not a clause bolted onto the underlying licenses:
+the copyleft licenses (CC BY-SA 4.0, GPL-3.0-or-later) do not allow
+added restrictions, and the CC0 1.0 waiver gives up all rights. That
+keeps the work freely reusable for open science, and it means the
+project relies on the reader's good faith. A defense against
+authoritarianism, built with tools that could serve authoritarianism,
+would defeat its own purpose. If you proceed against this covenant,
+you do so without the project's blessing — and, for the prose and the
+code, the licenses still require you to credit it. Reflect on how that
+credit will read.
+
+
+-- end NOTICE --

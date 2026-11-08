@@ -1,0 +1,61 @@
+Science Against Authoritarianism (Pharos) — License Index
+=========================================================
+
+Copyright (c) 2026 The Pharos contributors
+
+Pharos is a project for the public, built for the good of humanity and
+the environment. It is offered free of charge, and its contributors
+seek no personal recognition; the attribution the licenses require
+goes to "The Pharos contributors".
+
+
+This repository is multi-licensed. Different file types are governed
+by different SPDX-identified licenses, chosen to match the norms of
+each content type:
+
+  • Reports, manuscripts, prose, research deliverables (.md, .tex,
+    .pdf, plain prose) — Creative Commons Attribution-ShareAlike 4.0
+    International (CC BY-SA 4.0). Copyleft: derivatives must also be
+    CC BY-SA 4.0.
+    Canonical text: LICENSES/CC-BY-SA-4.0.txt
+
+  • Code (.py, .sh, .ipynb, Makefile, CI workflows) — GNU General
+    Public License version 3.0 or later (GPL-3.0-or-later). Copyleft:
+    derivatives that link or integrate this code must release source
+    under GPL-3.0-or-later.
+    Canonical text: LICENSES/GPL-3.0-or-later.txt
+
+  • Numerical outputs and fact tables (.csv, .json, derived metrics
+    from open datasets) — Creative Commons Zero 1.0 Universal
+    (CC0 1.0). Public-domain dedication.
+    Canonical text: LICENSES/CC0-1.0.txt
+
+  • Web files (.html, .css, .js) — licensed per file by their inline
+    SPDX headers: the observatory app code (site/app/app.js,
+    site/app/style.css) is GPL-3.0-or-later; the page markup and the
+    landing page (site/app/index.html, site/index.html, site/style.css)
+    are CC BY-SA 4.0.
+
+Every file's license is given by its inline SPDX header or, where it
+has none, by REUSE.toml. The project follows the REUSE specification
+(https://reuse.software).
+
+For the project's statement of original contributions, attribution,
+AI/ML training notice, and ethical-use covenant, see NOTICE.
+
+
+A note on third-party data
+--------------------------
+
+This project analyses open, third-party data: the World Bank Worldwide
+Governance Indicators, and V-Dem and Freedom House series via Our World
+in Data. Those datasets carry their own licenses and citation
+requirements and are NOT relicensed by this repository. Small pinned
+extracts are redistributed in data/snapshots/ under their upstream
+licenses, only so the pipeline reproduces offline (see REUSE.toml);
+credit each dataset to its own source under its own terms. The
+project's original analysis, code, prose, and derived figures are
+covered by the licenses above.
+
+
+-- end LICENSE index --

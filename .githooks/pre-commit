@@ -1,0 +1,11 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: 2026 The Pharos contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Free, local CI — no cloud, no billing. Runs the read-only audit dashboard
+# (tests + ledger structure + freshness + honesty + counts) before each commit.
+# Install once with:  make hooks      (sets git config core.hooksPath .githooks)
+# Bypass once with:    git commit --no-verify
+cd "$(git rev-parse --show-toplevel)" || exit 1
+echo "[pre-commit] make dashboard"
+exec make dashboard

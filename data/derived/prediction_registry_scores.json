@@ -1,0 +1,41 @@
+{
+  "scorings": [
+    {
+      "registry_issued": "2026-07-24",
+      "scored_on": "2026-10-31",
+      "realized_input": {
+        "source_url": "https://ourworldindata.org/grapher/freedom-of-expression-index.csv?v=1&csvType=full&useColumnShortNames=true",
+        "fetched_utc": "2026-10-31T14:54:32+00:00",
+        "input_sha256": "sha256:57b79f8954b14cbf19fcbc88827bcce1a30ae2e9e325973266ef34517439138a",
+        "path": "data/snapshots/vdem_freexp_realized_2026-10-31_57b79f89.csv"
+      },
+      "vintage_vs_pin": {
+        "compared": 6080,
+        "differing": 0,
+        "max_abs_diff": 0.0
+      },
+      "results": {
+        "1": {
+          "scored": 174,
+          "target_year": 2025,
+          "crps": 0.02165,
+          "brier": 0.08592,
+          "crps_climatology": 0.02195,
+          "brier_climatology": 0.08497,
+          "decline_events": 16,
+          "climatology_mu": 0.00232,
+          "crps_skill_vs_climatology": 0.0133,
+          "origin_revision_mean_abs": 0.0,
+          "origin_revision_max_abs": 0.0,
+          "prospective": false,
+          "climatology_source": "leak-free mean change over the same horizon, from the pinned input the registry was issued from"
+        },
+        "3": {
+          "scored": 0,
+          "note": "no realized data at 2027 yet"
+        }
+      }
+    }
+  ],
+  "note": "Scores of the frozen forward registry. The scored forecast is no-change. The climatology columns score a reference point with the same spread: the leak-free mean change over the same horizon, from the pinned input the registry was issued from. A result is prospective only if the source published the target year after the registry's issue date (V-Dem publishes each March with data through the previous year); otherwise it is blind but retrospective. vintage_vs_pin compares the realized panel with the June 2026 pin on every year both hold."
+}

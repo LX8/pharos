@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--
+SPDX-FileCopyrightText: 2026 The Pharos contributors
+SPDX-License-Identifier: CC-BY-SA-4.0
+Working draft of the project's public landing page. NOT deployed — see site/README.md.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c12">
+  <title>Aty Guasu — open, honest science against authoritarianism</title>
+  <meta name="description" content="An open, reproducible evidence commons for containing authoritarianism — cited only to what is measured, bound by one rule: watch power, not people.">
+
+  <!-- Social card. Without these a shared link unfurls as a bare URL. The domain-independent
+       tags work today; og:url / og:image / canonical need an absolute origin, and the domain
+       (like the name) is still undecided — asserting an unregistered domain would be
+       a false claim on a page about not making false claims. At gate-open, set the origin and
+       uncomment the block below, then ship a 1200x630 social-card.png. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aty Guasu">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="An evidence commons that publishes its own noise floor">
+  <meta property="og:description" content="Governance evidence with the uncertainty kept in the headline: 88% of a decade's measured change is within measurement noise. Graded, falsifiable, reproducible offline. Watch power, not people.">
+  <!-- 'summary' until social-card.png ships at gate-open — declaring a large-image card
+       with no image renders broken on several platforms; flip with the ORIGIN block below. -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="An evidence commons that publishes its own noise floor">
+  <meta name="twitter:description" content="88% of a decade's measured governance change is within measurement noise — and we lead with that. Graded, falsifiable, reproducible offline.">
+  <!-- At gate-open, replace ORIGIN and uncomment:
+  <link rel="canonical" href="ORIGIN/">
+  <meta property="og:url" content="ORIGIN/">
+  <meta property="og:image" content="ORIGIN/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aty Guasu — 88% of a decade's measured governance change is within measurement noise.">
+  <meta name="twitter:image" content="ORIGIN/social-card.png">
+  -->
+
+  <!-- Favicon: the hero lighthouse mark, inline as a data URI — no extra file, no request. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23090c12'/%3E%3Cg fill='none' stroke='%23eaab3c' stroke-width='1.4' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M8 21 L10 8 H14 L16 21 Z'/%3E%3Cpath d='M10 12 H14 M9.4 16 H14.6'/%3E%3Crect x='9.6' y='4' width='4.8' height='4' rx='1'/%3E%3Cpath d='M12 4 V1.8'/%3E%3Cpath d='M14.4 5.2 L19 4 M14.4 6.8 L19 8' opacity='.6'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="banner"><span aria-hidden="true">🚧</span> <strong>Working draft</strong> — this landing page is not deployed yet. The lighthouse is built; it is not lit yet.</div>
+
+  <header class="hero">
+    <span class="beam-cone" aria-hidden="true"></span>
+    <span class="lamp" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="eyebrow">
+        <svg class="mark" width="15" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true">
+          <path d="M3.2 19 L5 8 H11 L12.8 19 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M5 12 H11 M4.2 15.4 H11.8" stroke="currentColor" stroke-width="1.1"/>
+          <rect x="5.4" y="4" width="5.2" height="4" rx="1" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8 4 V1.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M11 5.4 L15.2 4 M11 6.6 L15.2 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".6"/>
+        </svg>
+        <span>Open evidence commons · containing authoritarianism</span>
+        <span class="wn">· the name below is a working name — your call</span>
+      </p>
+      <h1>Aty Guasu</h1>
+      <p class="subtitle">The Great Assembly</p>
+      <p class="lede">Open, honest science for containing authoritarianism — with the uncertainty in the headline, not the footnote: <b>88%</b> of a decade of measured governance change is within measurement noise.</p>
+      <p class="rule">Built in the open. <b>Cited only to what is measured.</b> Bound by one rule: <b>watch power, not people.</b></p>
+      <p class="cta">
+        <a class="btn btn-primary" href="#evidence">See what the evidence shows</a>
+        <a class="btn btn-ghost" href="#open">Check it yourself — offline, one command</a>
+      </p>
+    </div>
+  </header>
+
+
+  <nav class="secnav" aria-label="Sections">
+    <div class="secnav-inner">
+      <a href="#evidence"><span class="secnav-n">01</span>What the evidence actually shows</a>
+      <a href="#what-this-is"><span class="secnav-n">02</span>What this is</a>
+      <a href="#forecast"><span class="secnav-n">03</span>What honesty looks like in a forecast</a>
+      <a href="#how-it-works"><span class="secnav-n">04</span>How it works</a>
+      <a href="#method"><span class="secnav-n">05</span>The method, demonstrated</a>
+      <a href="#one-rule"><span class="secnav-n">06</span>The one rule</a>
+      <a href="#open"><span class="secnav-n">07</span>Open by design</a>
+      <a href="#sources"><span class="secnav-n">08</span>Sources &amp; further reading</a>
+    </div>
+  </nav>
+  <main class="wrap" id="main">
+
+    <h2 id="evidence"><span class="num" aria-hidden="true">01</span>What the evidence actually shows</h2>
+    <p>We measured democratic governance across six World Bank dimensions for ~204 countries,
+      2014&ndash;2024 &mdash; and we kept the uncertainty. The honest headline is narrower, and more
+      useful, than the doom-or-denial you usually read:</p>
+
+    <div class="finding">
+      <div class="finding-head">
+        <div class="bignum">88<span>%</span></div>
+        <p class="finding-sub">of ~1,200 country-by-dimension changes are <b>within measurement noise</b> &mdash;
+          most of the world did not measurably move in a decade.</p>
+      </div>
+      <div class="bar" role="img" aria-label="Of all governance changes: 88% within measurement noise, about 7% real declines, about 4% real improvements.">
+        <span class="seg seg-noise"   style="width:88.4%"></span>
+        <span class="seg seg-decline" style="width:7.2%"></span>
+        <span class="seg seg-improve" style="width:4.4%"></span>
+      </div>
+      <ul class="legend">
+        <li><i class="sw sw-noise"></i> Within noise</li>
+        <li><i class="sw sw-decline"></i> Real declines (lead improvements 88:54)</li>
+        <li><i class="sw sw-improve"></i> Real improvements</li>
+      </ul>
+      <p class="finding-note">Of the changes that <em>are</em> real, the erosion is
+        <b>concentrated in one place: Voice &amp; Accountability</b> &mdash; free expression, free media,
+        participation, the accountability of power.</p>
+    </div>
+
+    <p>We flag a change <em>only</em> when it beats its 90% confidence interval &mdash; and the voice
+      decline survives the stricter 95% bar too. And we don&rsquo;t ask you to trust one number: we put the
+      same question to <b>three independent instruments</b> (the World Bank, V-Dem, and Freedom House) and
+      publish <b>where they agree and where they conflict</b>. Every instrument that registers a
+      significant change concurs on a decline in voice in <b>45 countries</b> &mdash; none dissenting, and
+      in <b>26</b> of them all three are independently significant; the handful where they genuinely
+      disagree are flagged as conflicts, never averaged into a false consensus. A gamed single source
+      surfaces as a conflict, not a clean number.</p>
+
+    <details class="fold">
+      <summary>How the measurement works &mdash; in one paragraph</summary>
+      <p>For each country and governance dimension, we take the change in the published 0&ndash;100 score
+        from 2014 to 2024. The World Bank publishes a 90% confidence interval with every score; from it we
+        derive the standard error and test the change with a two-sided z-test, flagging <em>decline</em> or
+        <em>improvement</em> only when the change exceeds what the combined measurement uncertainty allows.
+        Deliberately conservative: anything smaller stays unflagged, because it could be noise. The voice
+        finding is stress-tested twice more &mdash; it survives the stricter 95% bar and an alternative
+        time window &mdash; and the full method, code, and data ship in the repository, reproducible
+        offline with one command.</p>
+    </details>
+
+    <h2 id="what-this-is"><span class="num" aria-hidden="true">02</span>What this is</h2>
+    <p>An <b>open, reproducible evidence commons</b> on two pillars &mdash; not a dashboard of opinions.
+      Every claim carries its grade and the exact condition under which it would be withdrawn.</p>
+    <div class="grid">
+      <div class="card"><h3>The Evidence Ledger</h3><p>41 graded, falsifiable evidence entries
+        (<span class="grade g-robust">ROBUST</span> <span class="grade g-contested">CONTESTED</span>
+        <span class="grade g-refuted">REFUTED</span>), each with a pre-registered falsification trigger and
+        a machine-checked structure. A generated <b>falsification watch</b> gathers every trigger in one
+        place, and each entry&rsquo;s next-review date goes stale loudly, not silently.</p></div>
+      <div class="card"><h3>The Forecast</h3><p>A calibration layer, not a hero call: pre-registered
+        backsliding forecasts, scored against a no-change baseline &mdash; honest enough to tell you it
+        doesn&rsquo;t beat that baseline <em>yet</em> (see &sect;&nbsp;03).</p></div>
+      <div class="card"><h3>The Indicators</h3><p>Governance change across six dimensions, computed with
+        honest uncertainty &mdash; then <em>triangulated</em> against V-Dem and Freedom House to publish
+        divergence, never a single score.</p></div>
+      <div class="card"><h3>The Simulators</h3><p>Seven validated mechanisms of social change &mdash; each
+        reproduces a <em>published</em> result via a unit test (threshold and network cascades, the
+        committed-minority tipping point, reverse dominance, complex contagion, the legitimacy tipping
+        point, and bounded-confidence opinion dynamics).</p></div>
+      <div class="card"><h3>Self-auditing</h3><p>Every public number is machine-checked &mdash;
+        structure, freshness, an overstatement guard, a count-consistency gate, and a
+        <em>spatial-floor</em> gate that blocks any data below country level &mdash; all reproducible
+        offline, one command, no network. Beyond the gates, the whole corpus has been put through
+        adversarial review: every citation web-verified, every formula independently re-derived.</p></div>
+      <div class="card"><h3>What&nbsp;is&nbsp;tested</h3><p>A tiering map of every claim, from
+        machine-verified down to honestly untestable. Nothing claims a tier it hasn&rsquo;t earned.</p></div>
+    </div>
+
+    <details class="fold">
+      <summary>What the grades mean &mdash; and what would change our minds</summary>
+      <dl class="grades">
+        <dt><span class="grade g-robust">ROBUST</span></dt>
+        <dd>Verified against primary sources; uncontested, or convergent across independent lines of evidence.</dd>
+        <dt><span class="grade g-contested">CONTESTED</span></dt>
+        <dd>Real evidence on both sides &mdash; replication failures or unresolved expert dispute. Reported as live, not settled.</dd>
+        <dt><span class="grade g-refuted">REFUTED</span></dt>
+        <dd>Fails verification. Kept on the record so no one builds on it twice.</dd>
+        <dt><span class="grade g-open">OPEN</span></dt>
+        <dd>The evidence does not yet answer the question &mdash; and we say so.</dd>
+      </dl>
+      <p>Every entry also pre-registers its <b>falsification trigger</b> &mdash; the specific observation
+        that would downgrade it. Meet a trigger with evidence and the grade moves: in public, dated, and
+        credited. That is the difference between an evidence commons and advocacy.</p>
+    </details>
+
+    <details class="fold">
+      <summary>How to check us &mdash; without trusting us</summary>
+      <p>Trust should be <em>checkable</em>, not requested. The signals, each verifiable on your own
+        machine, offline: <b>self-correction on the record</b> &mdash; a REFUTED grade kept in public view,
+        a forecast whose published headline is its own negative result, and adversarial review rounds whose
+        findings against <em>our own work</em> are documented with their fixes. <b>Byte-exact
+        reproduction</b> &mdash; one command recomputes everything from pinned snapshots with no network and
+        fails on any drift between code, data, and prose. <b>Pre-registered falsifiability</b> &mdash; every
+        entry&rsquo;s &ldquo;what would change our minds&rdquo; collected in one watchlist.
+        <b>Uncertainty as the headline</b> &mdash; the noise floor is the most prominent number we publish,
+        and disagreement between instruments is surfaced, never blended. <b>No funder to please</b> &mdash;
+        currently unfunded and independent; if that ever changes, disclosure comes first.</p>
+      <p>The full list, one verification command per signal, ships in the repo as
+        <code>docs/TRUST_SIGNALS.md</code>. The one-command version: <code>make verify-offline</code>.</p>
+    </details>
+
+    <h2 id="forecast"><span class="num" aria-hidden="true">03</span>What honesty looks like in a forecast</h2>
+    <p>Anyone can publish a scary prediction. The hard, trustworthy thing is to <b>score yourself in the
+      open.</b> So the forecasting pillar runs <b>2,600 pre-registered</b> backsliding forecasts and grades
+      them with proper scoring rules against two dead-simple baselines &mdash; assume <b>no change</b>, or
+      just predict the long-run base rate &mdash; then reports the result plainly:</p>
+    <blockquote>Our models beat <b>neither</b> baseline yet &mdash; and we say so, in public.</blockquote>
+    <p>That isn&rsquo;t a weakness to bury; it <em>is</em> the product. The bar to clear is written down
+      <em>before</em> the scoring, and a future model earns its place only by beating it on the same open
+      harness. A project that will tell you when its own forecast isn&rsquo;t good enough is one you can
+      believe when it says something <em>is</em>.</p>
+
+    <h2 id="how-it-works"><span class="num" aria-hidden="true">04</span>How it works &mdash; the lighthouse, not the dragnet</h2>
+    <p>Durable change comes when a committed minority reaches a critical mass and a cascade spreads
+      &mdash; but that cascade runs on <em>trusted, reinforcing signal</em>, exactly what disinformation
+      destroys. So we don&rsquo;t aggregate or surveil people. We build a true, open, reusable thing that
+      aligned people <b>find and gather around</b>, voluntarily. Supplying a <b>missing, trusted
+      information feedback loop</b> &mdash; what open, falsifiable science is &mdash; is a foundation a
+      small team can actually build; it crosses into action only once it is also made <em>salient</em>
+      and taken up in real work. It is a necessary seed, not a sufficient cause:
+      organizing and solidarity are coequal, never downstream.</p>
+
+    <h2 id="method"><span class="num" aria-hidden="true">05</span>The method, demonstrated</h2>
+    <p>We hold the same bar to ourselves and to others &mdash; adversarial, steelmanned, graded. As a
+      worked example, we ran the verification on a famous set of public claims: of Graham Hancock&rsquo;s
+      ten major claims, <b>0 were supported and 5 refuted</b> &mdash; while fairly crediting the few real
+      things mainstream science has had to update on. The discipline, not the verdict, is the product.</p>
+
+    <h2 id="one-rule"><span class="num" aria-hidden="true">06</span>The one rule</h2>
+    <blockquote>Watch power, not people.</blockquote>
+    <p>Everything here measures the <em>conduct of institutions and power</em> &mdash; never individuals.
+      No surveillance, no predictive policing, no targeting. An instrument built to defend open societies
+      must never become one that could serve their enemies. And because a covenant alone is non-binding on
+      open licences, it is backed by an <b>enforced threat model</b>: a written gate decides what may be
+      computed and published &mdash; protection lives in the design, not just the promise.</p>
+
+    <h2 id="open"><span class="num" aria-hidden="true">07</span>Open by design</h2>
+    <p>Multi-licensed and reproducible: prose under CC&nbsp;BY-SA&nbsp;4.0, code under GPL-3.0, derived
+      data under CC0. The whole project runs as <b>one stdlib-only command</b> &mdash; <code>./pharos</code>
+      browses the graded entries, prints the indicators and the forecast, and re-runs the audits &mdash;
+      <b>offline, no install, no network</b>. Everything recomputes from pinned data and self-audits
+      before every change. Fork it, check it, build on it, prove it wrong. The strongest contribution is
+      meeting a claim&rsquo;s falsification trigger with evidence.</p>
+
+    <h2 id="sources"><span class="num" aria-hidden="true">08</span>Sources &amp; further reading</h2>
+    <p>The primary sources behind this page &mdash; every one verified against the published record before
+      being cited (the full, per-claim source lists live with each ledger entry):</p>
+    <ul class="refs">
+      <li>World Bank &mdash; <a href="https://www.worldbank.org/en/publication/worldwide-governance-indicators" rel="noopener">Worldwide Governance Indicators</a> (the six dimensions, with published confidence intervals).</li>
+      <li>V-Dem &mdash; freedom-of-expression index, and Freedom House &mdash; civil liberties, both via <a href="https://ourworldindata.org" rel="noopener">Our World in Data</a> (the triangulation instruments).</li>
+      <li>Hegre, H. et&nbsp;al. (2019). <a href="https://journals.sagepub.com/doi/full/10.1177/0022343319823860" rel="noopener">ViEWS: a political violence early-warning system</a>. <em>Journal of Peace Research</em>.</li>
+      <li>Hegre, H. et&nbsp;al. (2024). <a href="https://arxiv.org/abs/2407.11045" rel="noopener">The 2023/24 VIEWS Prediction Challenge</a> &mdash; where most models are beaten by a naive baseline under fair scoring (why our forecast scores itself the way it does).</li>
+      <li>Gneiting, T. &amp; Raftery, A. (2007). Strictly proper scoring rules, prediction, and estimation. <em>JASA</em> (the CRPS our forecast is scored by).</li>
+      <li>Paxton, R. O. (2004). <em>The Anatomy of Fascism</em>. Knopf (the behavioral definition this project uses).</li>
+      <li>Bermeo, N. (2016). On Democratic Backsliding. <em>Journal of Democracy</em> (erosion as gradual executive aggrandizement, not coups).</li>
+      <li>Granovetter, M. (1978) <em>AJS</em>; Watts, D. J. (2002) <a href="https://www.pnas.org/doi/10.1073/pnas.082090499" rel="noopener"><em>PNAS</em></a>; Centola, D. &amp; Macy, M. (2007) <a href="https://www.journals.uchicago.edu/doi/10.1086/521848" rel="noopener"><em>AJS</em></a>; Centola, D. et&nbsp;al. (2018) <a href="https://www.science.org/doi/10.1126/science.aas8827" rel="noopener"><em>Science</em></a>; Deffuant, G. et&nbsp;al. (2000) <em>Adv. Complex Syst.</em>; Epstein, J. (2002) <em>PNAS</em> &mdash; the published results the mechanism simulators reproduce.</li>
+      <li>Wineburg, S. &amp; McGrew, S. (2019). Lateral Reading and the Nature of Expertise. <em>Teachers College Record</em> (the actionable epistemic defense).</li>
+    </ul>
+
+  </main>
+
+  <footer class="wrap">
+    <p class="lic">A project for the public, for the good of humanity and the environment &middot;
+      by <b>The Pharos contributors</b><br>
+      Licensed <code>CC&nbsp;BY-SA&nbsp;4.0</code> (prose) &middot; <code>GPL-3.0</code> (code) &middot;
+      <code>CC0</code> (data). <em>Cite only what is measured.</em><br>
+      <b>v0.7.0</b> &middot; two pillars &mdash; a 41-entry evidence ledger and a forecast &mdash; both
+      machine-checked and reproducible from open data.</p>
+    <p class="small">&ldquo;Aty Guasu&rdquo; is the Guarani name for the great assembly of the peoples.
+      Working name &mdash; to be confirmed or changed.</p>
+  </footer>
+</body>
+</html>

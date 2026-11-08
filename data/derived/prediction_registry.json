@@ -1,0 +1,4028 @@
+{
+  "test": "pharos forward prediction registry \u2014 dated, frozen, falsifiable forecasts",
+  "issued": "2026-07-24",
+  "issued_utc": "2026-07-24T12:43:20+00:00",
+  "origin_year": 2024,
+  "horizons": [
+    1,
+    3
+  ],
+  "model": "no-change baseline (the bar the backtest set) with leak-free spread; climatology point recorded for reference, not scored as a hero call",
+  "scoring_rule": "CRPS (Gneiting&Raftery 2007) + Brier on the decline event (\u0394<=-0.05); score with: python3 src/forecast/prediction_registry.py --score",
+  "input_provenance": {
+    "source_url": "https://ourworldindata.org/grapher/freedom-of-expression-index.csv?v=1&csvType=full&useColumnShortNames=true",
+    "fetched_utc": "2026-06-18T04:35:36+00:00",
+    "input_sha256": "sha256:5f734319cdbe665c61040969670547366fa6b0fbc46b9c84376a964f6a32a33a"
+  },
+  "fit": {
+    "sigma_1yr": 0.04651,
+    "sigma_3yr": 0.08905,
+    "panel_hist_mean_1yr": 0.00232,
+    "n_countries": 174
+  },
+  "ethical_note": "Country/institution-level probabilistic forecasts \u2014 watch power, not people (NOTICE \u00a77, THREAT_MODEL.md). No hero call, by design (R6).",
+  "forecasts": {
+    "AFG": {
+      "country": "AFG",
+      "origin_year": 2024,
+      "origin_value": 0.08,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "AGO": {
+      "country": "AGO",
+      "origin_year": 2024,
+      "origin_value": 0.486,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ALB": {
+      "country": "ALB",
+      "origin_year": 2024,
+      "origin_value": 0.693,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ARE": {
+      "country": "ARE",
+      "origin_year": 2024,
+      "origin_value": 0.062,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ARG": {
+      "country": "ARG",
+      "origin_year": 2024,
+      "origin_value": 0.766,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ARM": {
+      "country": "ARM",
+      "origin_year": 2024,
+      "origin_value": 0.73,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "AUS": {
+      "country": "AUS",
+      "origin_year": 2024,
+      "origin_value": 0.923,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "AUT": {
+      "country": "AUT",
+      "origin_year": 2024,
+      "origin_value": 0.923,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "AZE": {
+      "country": "AZE",
+      "origin_year": 2024,
+      "origin_value": 0.118,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BDI": {
+      "country": "BDI",
+      "origin_year": 2024,
+      "origin_value": 0.158,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BEL": {
+      "country": "BEL",
+      "origin_year": 2024,
+      "origin_value": 0.969,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BEN": {
+      "country": "BEN",
+      "origin_year": 2024,
+      "origin_value": 0.686,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BFA": {
+      "country": "BFA",
+      "origin_year": 2024,
+      "origin_value": 0.348,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BGD": {
+      "country": "BGD",
+      "origin_year": 2024,
+      "origin_value": 0.444,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BGR": {
+      "country": "BGR",
+      "origin_year": 2024,
+      "origin_value": 0.817,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BHR": {
+      "country": "BHR",
+      "origin_year": 2024,
+      "origin_value": 0.163,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BIH": {
+      "country": "BIH",
+      "origin_year": 2024,
+      "origin_value": 0.666,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BLR": {
+      "country": "BLR",
+      "origin_year": 2024,
+      "origin_value": 0.029,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BOL": {
+      "country": "BOL",
+      "origin_year": 2024,
+      "origin_value": 0.726,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BRA": {
+      "country": "BRA",
+      "origin_year": 2024,
+      "origin_value": 0.923,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BRB": {
+      "country": "BRB",
+      "origin_year": 2024,
+      "origin_value": 0.92,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BTN": {
+      "country": "BTN",
+      "origin_year": 2024,
+      "origin_value": 0.704,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "BWA": {
+      "country": "BWA",
+      "origin_year": 2024,
+      "origin_value": 0.794,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CAF": {
+      "country": "CAF",
+      "origin_year": 2024,
+      "origin_value": 0.589,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CAN": {
+      "country": "CAN",
+      "origin_year": 2024,
+      "origin_value": 0.941,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CHE": {
+      "country": "CHE",
+      "origin_year": 2024,
+      "origin_value": 0.967,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CHL": {
+      "country": "CHL",
+      "origin_year": 2024,
+      "origin_value": 0.928,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CHN": {
+      "country": "CHN",
+      "origin_year": 2024,
+      "origin_value": 0.043,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CIV": {
+      "country": "CIV",
+      "origin_year": 2024,
+      "origin_value": 0.653,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CMR": {
+      "country": "CMR",
+      "origin_year": 2024,
+      "origin_value": 0.593,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "COD": {
+      "country": "COD",
+      "origin_year": 2024,
+      "origin_value": 0.578,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "COG": {
+      "country": "COG",
+      "origin_year": 2024,
+      "origin_value": 0.399,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "COL": {
+      "country": "COL",
+      "origin_year": 2024,
+      "origin_value": 0.84,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "COM": {
+      "country": "COM",
+      "origin_year": 2024,
+      "origin_value": 0.464,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CPV": {
+      "country": "CPV",
+      "origin_year": 2024,
+      "origin_value": 0.858,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CRI": {
+      "country": "CRI",
+      "origin_year": 2024,
+      "origin_value": 0.915,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CUB": {
+      "country": "CUB",
+      "origin_year": 2024,
+      "origin_value": 0.09,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CYP": {
+      "country": "CYP",
+      "origin_year": 2024,
+      "origin_value": 0.823,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "CZE": {
+      "country": "CZE",
+      "origin_year": 2024,
+      "origin_value": 0.96,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "DEU": {
+      "country": "DEU",
+      "origin_year": 2024,
+      "origin_value": 0.92,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "DJI": {
+      "country": "DJI",
+      "origin_year": 2024,
+      "origin_value": 0.336,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "DNK": {
+      "country": "DNK",
+      "origin_year": 2024,
+      "origin_value": 0.985,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "DOM": {
+      "country": "DOM",
+      "origin_year": 2024,
+      "origin_value": 0.899,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "DZA": {
+      "country": "DZA",
+      "origin_year": 2024,
+      "origin_value": 0.348,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ECU": {
+      "country": "ECU",
+      "origin_year": 2024,
+      "origin_value": 0.742,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "EGY": {
+      "country": "EGY",
+      "origin_year": 2024,
+      "origin_value": 0.178,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ERI": {
+      "country": "ERI",
+      "origin_year": 2024,
+      "origin_value": 0.024,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ESP": {
+      "country": "ESP",
+      "origin_year": 2024,
+      "origin_value": 0.85,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "EST": {
+      "country": "EST",
+      "origin_year": 2024,
+      "origin_value": 0.969,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ETH": {
+      "country": "ETH",
+      "origin_year": 2024,
+      "origin_value": 0.245,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "FIN": {
+      "country": "FIN",
+      "origin_year": 2024,
+      "origin_value": 0.95,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "FJI": {
+      "country": "FJI",
+      "origin_year": 2024,
+      "origin_value": 0.747,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "FRA": {
+      "country": "FRA",
+      "origin_year": 2024,
+      "origin_value": 0.959,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GAB": {
+      "country": "GAB",
+      "origin_year": 2024,
+      "origin_value": 0.755,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GBR": {
+      "country": "GBR",
+      "origin_year": 2024,
+      "origin_value": 0.915,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GEO": {
+      "country": "GEO",
+      "origin_year": 2024,
+      "origin_value": 0.701,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GHA": {
+      "country": "GHA",
+      "origin_year": 2024,
+      "origin_value": 0.857,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GIN": {
+      "country": "GIN",
+      "origin_year": 2024,
+      "origin_value": 0.539,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GMB": {
+      "country": "GMB",
+      "origin_year": 2024,
+      "origin_value": 0.808,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GNB": {
+      "country": "GNB",
+      "origin_year": 2024,
+      "origin_value": 0.621,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GNQ": {
+      "country": "GNQ",
+      "origin_year": 2024,
+      "origin_value": 0.139,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GRC": {
+      "country": "GRC",
+      "origin_year": 2024,
+      "origin_value": 0.808,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GTM": {
+      "country": "GTM",
+      "origin_year": 2024,
+      "origin_value": 0.804,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "GUY": {
+      "country": "GUY",
+      "origin_year": 2024,
+      "origin_value": 0.788,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "HKG": {
+      "country": "HKG",
+      "origin_year": 2024,
+      "origin_value": 0.265,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "HND": {
+      "country": "HND",
+      "origin_year": 2024,
+      "origin_value": 0.867,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "HRV": {
+      "country": "HRV",
+      "origin_year": 2024,
+      "origin_value": 0.766,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "HTI": {
+      "country": "HTI",
+      "origin_year": 2024,
+      "origin_value": 0.79,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "HUN": {
+      "country": "HUN",
+      "origin_year": 2024,
+      "origin_value": 0.512,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "IDN": {
+      "country": "IDN",
+      "origin_year": 2024,
+      "origin_value": 0.741,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "IND": {
+      "country": "IND",
+      "origin_year": 2024,
+      "origin_value": 0.477,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "IRL": {
+      "country": "IRL",
+      "origin_year": 2024,
+      "origin_value": 0.974,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "IRN": {
+      "country": "IRN",
+      "origin_year": 2024,
+      "origin_value": 0.23,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "IRQ": {
+      "country": "IRQ",
+      "origin_year": 2024,
+      "origin_value": 0.533,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ISL": {
+      "country": "ISL",
+      "origin_year": 2024,
+      "origin_value": 0.912,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ISR": {
+      "country": "ISR",
+      "origin_year": 2024,
+      "origin_value": 0.838,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ITA": {
+      "country": "ITA",
+      "origin_year": 2024,
+      "origin_value": 0.835,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "JAM": {
+      "country": "JAM",
+      "origin_year": 2024,
+      "origin_value": 0.919,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "JOR": {
+      "country": "JOR",
+      "origin_year": 2024,
+      "origin_value": 0.575,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "JPN": {
+      "country": "JPN",
+      "origin_year": 2024,
+      "origin_value": 0.849,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "KAZ": {
+      "country": "KAZ",
+      "origin_year": 2024,
+      "origin_value": 0.359,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "KEN": {
+      "country": "KEN",
+      "origin_year": 2024,
+      "origin_value": 0.897,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "KGZ": {
+      "country": "KGZ",
+      "origin_year": 2024,
+      "origin_value": 0.479,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "KHM": {
+      "country": "KHM",
+      "origin_year": 2024,
+      "origin_value": 0.162,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "KOR": {
+      "country": "KOR",
+      "origin_year": 2024,
+      "origin_value": 0.782,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "KWT": {
+      "country": "KWT",
+      "origin_year": 2024,
+      "origin_value": 0.565,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LAO": {
+      "country": "LAO",
+      "origin_year": 2024,
+      "origin_value": 0.038,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LBN": {
+      "country": "LBN",
+      "origin_year": 2024,
+      "origin_value": 0.726,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LBR": {
+      "country": "LBR",
+      "origin_year": 2024,
+      "origin_value": 0.836,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LBY": {
+      "country": "LBY",
+      "origin_year": 2024,
+      "origin_value": 0.558,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LKA": {
+      "country": "LKA",
+      "origin_year": 2024,
+      "origin_value": 0.857,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LSO": {
+      "country": "LSO",
+      "origin_year": 2024,
+      "origin_value": 0.708,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LTU": {
+      "country": "LTU",
+      "origin_year": 2024,
+      "origin_value": 0.933,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LUX": {
+      "country": "LUX",
+      "origin_year": 2024,
+      "origin_value": 0.957,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "LVA": {
+      "country": "LVA",
+      "origin_year": 2024,
+      "origin_value": 0.932,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MAR": {
+      "country": "MAR",
+      "origin_year": 2024,
+      "origin_value": 0.595,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MDA": {
+      "country": "MDA",
+      "origin_year": 2024,
+      "origin_value": 0.674,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MDG": {
+      "country": "MDG",
+      "origin_year": 2024,
+      "origin_value": 0.658,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MDV": {
+      "country": "MDV",
+      "origin_year": 2024,
+      "origin_value": 0.738,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MEX": {
+      "country": "MEX",
+      "origin_year": 2024,
+      "origin_value": 0.645,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MKD": {
+      "country": "MKD",
+      "origin_year": 2024,
+      "origin_value": 0.658,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MLI": {
+      "country": "MLI",
+      "origin_year": 2024,
+      "origin_value": 0.589,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MLT": {
+      "country": "MLT",
+      "origin_year": 2024,
+      "origin_value": 0.829,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MMR": {
+      "country": "MMR",
+      "origin_year": 2024,
+      "origin_value": 0.037,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MNE": {
+      "country": "MNE",
+      "origin_year": 2024,
+      "origin_value": 0.855,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MNG": {
+      "country": "MNG",
+      "origin_year": 2024,
+      "origin_value": 0.694,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MOZ": {
+      "country": "MOZ",
+      "origin_year": 2024,
+      "origin_value": 0.52,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MRT": {
+      "country": "MRT",
+      "origin_year": 2024,
+      "origin_value": 0.646,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MUS": {
+      "country": "MUS",
+      "origin_year": 2024,
+      "origin_value": 0.621,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MWI": {
+      "country": "MWI",
+      "origin_year": 2024,
+      "origin_value": 0.784,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "MYS": {
+      "country": "MYS",
+      "origin_year": 2024,
+      "origin_value": 0.593,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NAM": {
+      "country": "NAM",
+      "origin_year": 2024,
+      "origin_value": 0.844,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NER": {
+      "country": "NER",
+      "origin_year": 2024,
+      "origin_value": 0.749,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NGA": {
+      "country": "NGA",
+      "origin_year": 2024,
+      "origin_value": 0.893,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NIC": {
+      "country": "NIC",
+      "origin_year": 2024,
+      "origin_value": 0.022,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NLD": {
+      "country": "NLD",
+      "origin_year": 2024,
+      "origin_value": 0.892,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NOR": {
+      "country": "NOR",
+      "origin_year": 2024,
+      "origin_value": 0.948,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NPL": {
+      "country": "NPL",
+      "origin_year": 2024,
+      "origin_value": 0.832,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "NZL": {
+      "country": "NZL",
+      "origin_year": 2024,
+      "origin_value": 0.95,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "OMN": {
+      "country": "OMN",
+      "origin_year": 2024,
+      "origin_value": 0.151,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PAK": {
+      "country": "PAK",
+      "origin_year": 2024,
+      "origin_value": 0.559,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PAN": {
+      "country": "PAN",
+      "origin_year": 2024,
+      "origin_value": 0.804,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PER": {
+      "country": "PER",
+      "origin_year": 2024,
+      "origin_value": 0.739,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PHL": {
+      "country": "PHL",
+      "origin_year": 2024,
+      "origin_value": 0.676,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PNG": {
+      "country": "PNG",
+      "origin_year": 2024,
+      "origin_value": 0.818,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "POL": {
+      "country": "POL",
+      "origin_year": 2024,
+      "origin_value": 0.911,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PRK": {
+      "country": "PRK",
+      "origin_year": 2024,
+      "origin_value": 0.013,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PRT": {
+      "country": "PRT",
+      "origin_year": 2024,
+      "origin_value": 0.899,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "PRY": {
+      "country": "PRY",
+      "origin_year": 2024,
+      "origin_value": 0.751,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "QAT": {
+      "country": "QAT",
+      "origin_year": 2024,
+      "origin_value": 0.053,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ROU": {
+      "country": "ROU",
+      "origin_year": 2024,
+      "origin_value": 0.736,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "RUS": {
+      "country": "RUS",
+      "origin_year": 2024,
+      "origin_value": 0.08,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "RWA": {
+      "country": "RWA",
+      "origin_year": 2024,
+      "origin_value": 0.154,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SAU": {
+      "country": "SAU",
+      "origin_year": 2024,
+      "origin_value": 0.087,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SDN": {
+      "country": "SDN",
+      "origin_year": 2024,
+      "origin_value": 0.268,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SEN": {
+      "country": "SEN",
+      "origin_year": 2024,
+      "origin_value": 0.82,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SGP": {
+      "country": "SGP",
+      "origin_year": 2024,
+      "origin_value": 0.348,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SLB": {
+      "country": "SLB",
+      "origin_year": 2024,
+      "origin_value": 0.84,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SLE": {
+      "country": "SLE",
+      "origin_year": 2024,
+      "origin_value": 0.823,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SLV": {
+      "country": "SLV",
+      "origin_year": 2024,
+      "origin_value": 0.392,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SOM": {
+      "country": "SOM",
+      "origin_year": 2024,
+      "origin_value": 0.619,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SRB": {
+      "country": "SRB",
+      "origin_year": 2024,
+      "origin_value": 0.438,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SSD": {
+      "country": "SSD",
+      "origin_year": 2024,
+      "origin_value": 0.182,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "STP": {
+      "country": "STP",
+      "origin_year": 2024,
+      "origin_value": 0.793,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SUR": {
+      "country": "SUR",
+      "origin_year": 2024,
+      "origin_value": 0.888,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SVK": {
+      "country": "SVK",
+      "origin_year": 2024,
+      "origin_value": 0.807,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SVN": {
+      "country": "SVN",
+      "origin_year": 2024,
+      "origin_value": 0.752,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SWE": {
+      "country": "SWE",
+      "origin_year": 2024,
+      "origin_value": 0.946,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SWZ": {
+      "country": "SWZ",
+      "origin_year": 2024,
+      "origin_value": 0.113,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SYC": {
+      "country": "SYC",
+      "origin_year": 2024,
+      "origin_value": 0.822,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "SYR": {
+      "country": "SYR",
+      "origin_year": 2024,
+      "origin_value": 0.07,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TCD": {
+      "country": "TCD",
+      "origin_year": 2024,
+      "origin_value": 0.471,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TGO": {
+      "country": "TGO",
+      "origin_year": 2024,
+      "origin_value": 0.576,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "THA": {
+      "country": "THA",
+      "origin_year": 2024,
+      "origin_value": 0.582,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TJK": {
+      "country": "TJK",
+      "origin_year": 2024,
+      "origin_value": 0.087,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TKM": {
+      "country": "TKM",
+      "origin_year": 2024,
+      "origin_value": 0.042,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TLS": {
+      "country": "TLS",
+      "origin_year": 2024,
+      "origin_value": 0.837,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TTO": {
+      "country": "TTO",
+      "origin_year": 2024,
+      "origin_value": 0.886,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TUN": {
+      "country": "TUN",
+      "origin_year": 2024,
+      "origin_value": 0.751,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TUR": {
+      "country": "TUR",
+      "origin_year": 2024,
+      "origin_value": 0.183,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TWN": {
+      "country": "TWN",
+      "origin_year": 2024,
+      "origin_value": 0.851,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "TZA": {
+      "country": "TZA",
+      "origin_year": 2024,
+      "origin_value": 0.683,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "UGA": {
+      "country": "UGA",
+      "origin_year": 2024,
+      "origin_value": 0.443,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "UKR": {
+      "country": "UKR",
+      "origin_year": 2024,
+      "origin_value": 0.411,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "URY": {
+      "country": "URY",
+      "origin_year": 2024,
+      "origin_value": 0.913,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "USA": {
+      "country": "USA",
+      "origin_year": 2024,
+      "origin_value": 0.904,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "UZB": {
+      "country": "UZB",
+      "origin_year": 2024,
+      "origin_value": 0.222,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "VEN": {
+      "country": "VEN",
+      "origin_year": 2024,
+      "origin_value": 0.211,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "VNM": {
+      "country": "VNM",
+      "origin_year": 2024,
+      "origin_value": 0.12,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "VUT": {
+      "country": "VUT",
+      "origin_year": 2024,
+      "origin_value": 0.884,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "YEM": {
+      "country": "YEM",
+      "origin_year": 2024,
+      "origin_value": 0.243,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ZAF": {
+      "country": "ZAF",
+      "origin_year": 2024,
+      "origin_value": 0.835,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ZMB": {
+      "country": "ZMB",
+      "origin_year": 2024,
+      "origin_value": 0.784,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    },
+    "ZWE": {
+      "country": "ZWE",
+      "origin_year": 2024,
+      "origin_value": 0.44,
+      "horizons": {
+        "1": {
+          "horizon_years": 1,
+          "target_year": 2025,
+          "mu": 0.0,
+          "sigma": 0.04651,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.1412
+        },
+        "3": {
+          "horizon_years": 3,
+          "target_year": 2027,
+          "mu": 0.0,
+          "sigma": 0.08905,
+          "climatology_mu": 0.00232,
+          "p_decline_event": 0.2872
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 The Pharos contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Line endings are load-bearing here. The committed generated files are compared BYTE-FOR-BYTE by
+# the reproducibility gates: `make verify-offline` diffs the recompute against data/derived, and the
+# `ledger index` audit diffs the regenerated INDEX.md against the committed one. Their bytes must match
+# exactly what the generating code writes on every platform — Python's csv module writes CRLF; json.dump
+# and the digest write LF. Without this, a clone on a system with core.autocrlf (Windows default) would
+# check these out with different bytes than the deterministic recompute produces, and the gate would
+# fail spuriously — breaking the project's core "byte-identical offline" guarantee.
+#
+# The CSVs carry CRLF: mark them binary so git preserves their exact bytes with NO conversion anywhere
+# (store-exact, checkout-exact) — the simplest guarantee for a byte-identical-reproduction repo, and it
+# leaves the already-committed blobs untouched. The LF files stay diffable text but are pinned to LF so
+# autocrlf can't add carriage returns on checkout.
+data/**/*.csv    -text
+data/**/*.json   text eol=lf
+ledger/INDEX.md  text eol=lf
+
+# Everything else keeps git's default handling (no forced conversion); source and prose stay LF.

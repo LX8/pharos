@@ -1,0 +1,302 @@
+{
+  "ledger": "Pharos Ledger",
+  "description": "Open, versioned, adversarially-verified evidence base on containing authoritarianism and how societies change. Each entry is graded and carries a falsification trigger.",
+  "version": "0.7.0",
+  "updated": "2026-08-28",
+  "license": "CC-BY-SA-4.0",
+  "grades": [
+    "ROBUST",
+    "CONTESTED",
+    "REFUTED",
+    "OPEN"
+  ],
+  "entries": [
+    {
+      "id": "SAA-001",
+      "grade": "ROBUST",
+      "domain": "definition",
+      "file": "SAA-001-fascism-is-behavior.md",
+      "title": "Fascism is a form of political behavior, not a doctrine"
+    },
+    {
+      "id": "SAA-002",
+      "grade": "ROBUST",
+      "domain": "epistemic-defense",
+      "file": "SAA-002-prebunking-works-at-scale.md",
+      "title": "Prebunking raises manipulation-resistance at scale"
+    },
+    {
+      "id": "SAA-003",
+      "grade": "CONTESTED",
+      "domain": "epistemic-defense",
+      "file": "SAA-003-prebunking-transfer-contested.md",
+      "title": "Prebunking does not reliably transfer to true/false discrimination"
+    },
+    {
+      "id": "SAA-004",
+      "grade": "ROBUST",
+      "domain": "social-cohesion",
+      "file": "SAA-004-contact-reduces-prejudice.md",
+      "title": "Intergroup contact correlates with reduced prejudice"
+    },
+    {
+      "id": "SAA-005",
+      "grade": "CONTESTED",
+      "domain": "social-cohesion",
+      "file": "SAA-005-contact-caveats.md",
+      "title": "Contact evidence has serious publication-bias/external-validity caveats"
+    },
+    {
+      "id": "SAA-006",
+      "grade": "OPEN",
+      "domain": "political-economy",
+      "file": "SAA-006-status-threat-vs-economics.md",
+      "title": "Status-threat vs economic-anxiety is unresolved"
+    },
+    {
+      "id": "SAA-007",
+      "grade": "ROBUST",
+      "domain": "systems-and-tech",
+      "file": "SAA-007-open-early-warning-exists.md",
+      "title": "Operational openly-reproducible conflict early-warning systems exist"
+    },
+    {
+      "id": "SAA-008",
+      "grade": "ROBUST",
+      "domain": "social-change",
+      "file": "SAA-008-critical-mass-cascades-are-real.md",
+      "title": "Committed minorities can tip systems; change cascades through networks"
+    },
+    {
+      "id": "SAA-009",
+      "grade": "ROBUST",
+      "domain": "social-change",
+      "file": "SAA-009-no-universal-threshold.md",
+      "title": "No universal critical-mass number; cascades are not automatic"
+    },
+    {
+      "id": "SAA-010",
+      "grade": "ROBUST",
+      "domain": "social-change",
+      "file": "SAA-010-energy-is-complex-contagion.md",
+      "title": "The 'energy' driving cascades is complex contagion, not a mystical field"
+    },
+    {
+      "id": "SAA-011",
+      "grade": "REFUTED",
+      "domain": "social-change",
+      "file": "SAA-011-refuted-pseudoscience.md",
+      "title": "Refuted pseudoscience: 100th monkey, morphic resonance, consciousness fields"
+    },
+    {
+      "id": "SAA-012",
+      "grade": "CONTESTED",
+      "domain": "anthropology",
+      "file": "SAA-012-reverse-dominance-hierarchy.md",
+      "title": "Reverse dominance hierarchy — evolutionary root of resisting tyranny (contested)"
+    },
+    {
+      "id": "SAA-013",
+      "grade": "ROBUST",
+      "domain": "anthropology",
+      "file": "SAA-013-ostrom-self-governance.md",
+      "title": "Self-governance avoids both tyranny and collapse — Ostrom (robust locally)"
+    },
+    {
+      "id": "SAA-014",
+      "grade": "CONTESTED",
+      "domain": "anthropology",
+      "file": "SAA-014-peaceful-societies-war-antiquity.md",
+      "title": "Peaceful societies exist / war not inevitable — antiquity contested"
+    },
+    {
+      "id": "SAA-015",
+      "grade": "ROBUST",
+      "domain": "anthropology",
+      "file": "SAA-015-cultural-evolution-cooperation.md",
+      "title": "Cooperation is culturally evolved (framework robust; WEIRD mechanism contested)"
+    },
+    {
+      "id": "SAA-016",
+      "grade": "ROBUST",
+      "domain": "psychology",
+      "file": "SAA-016-rwa-sdo-authoritarian-disposition.md",
+      "title": "RWA and SDO are robust, replicated individual-difference predictors of prejudice and anti-democratic attitudes"
+    },
+    {
+      "id": "SAA-017",
+      "grade": "CONTESTED",
+      "domain": "psychology",
+      "file": "SAA-017-milgram-obedience.md",
+      "title": "Milgram: the obedience EFFECT is robust/replicated; the 'blind obedience' INTERPRETATION is contested"
+    },
+    {
+      "id": "SAA-018",
+      "grade": "CONTESTED",
+      "domain": "psychology",
+      "file": "SAA-018-moral-foundations-theory.md",
+      "title": "Moral Foundations Theory: 5/6 innate universal foundations explaining the left-right divide"
+    },
+    {
+      "id": "SAA-019",
+      "grade": "ROBUST",
+      "domain": "psychology",
+      "file": "SAA-019-minimal-group-paradigm.md",
+      "title": "Mere categorization into arbitrary groups produces in-group favoritism in resource allocation (minimal group paradigm)"
+    },
+    {
+      "id": "SAA-020",
+      "grade": "ROBUST",
+      "domain": "psychology",
+      "file": "SAA-020-asch-conformity.md",
+      "title": "Asch conformity: a unanimous wrong majority makes a substantial minority conform to obvious errors"
+    },
+    {
+      "id": "SAA-021",
+      "grade": "ROBUST",
+      "domain": "psychology",
+      "file": "SAA-021-blatant-dehumanization.md",
+      "title": "Blatant dehumanization (Ascent of Man) predicts hostile/exclusionary policy support beyond prejudice"
+    },
+    {
+      "id": "SAA-022",
+      "grade": "CONTESTED",
+      "domain": "sociology",
+      "file": "SAA-022-dynamics-of-contention-mechanisms.md",
+      "title": "'Dynamics of Contention' mechanism-process program: influential framework, contested as underspecified"
+    },
+    {
+      "id": "SAA-023",
+      "grade": "CONTESTED",
+      "domain": "sociology",
+      "file": "SAA-023-nonviolent-resistance-success.md",
+      "title": "Nonviolent campaigns succeeded ~2x as often as violent ones (53% vs 26%) in 1900-2006 NAVCO data"
+    },
+    {
+      "id": "SAA-024",
+      "grade": "CONTESTED",
+      "domain": "sociology",
+      "file": "SAA-024-social-capital.md",
+      "title": "Social capital robustly correlates with governance, but causal direction and decline are contested"
+    },
+    {
+      "id": "SAA-025",
+      "grade": "ROBUST",
+      "domain": "sociology",
+      "file": "SAA-025-repression-backfire.md",
+      "title": "Repression backfire is real but conditional, not universal; net effect on mobilization is unresolved"
+    },
+    {
+      "id": "SAA-026",
+      "grade": "CONTESTED",
+      "domain": "sociology",
+      "file": "SAA-026-affective-polarization.md",
+      "title": "US affective polarization is real, rising, and well-measured; its causal harm to democracy is contested"
+    },
+    {
+      "id": "SAA-027",
+      "grade": "ROBUST",
+      "domain": "social-cohesion",
+      "file": "SAA-027-depolarization-megastudy.md",
+      "title": "Megastudies cut partisan animosity, but that does not reliably lower anti-democratic attitudes"
+    },
+    {
+      "id": "SAA-028",
+      "grade": "ROBUST",
+      "domain": "democratic-backsliding",
+      "file": "SAA-028-democratic-recession-2024.md",
+      "title": "V-Dem and Freedom House measure a multi-decade global democratic recession; its global magnitude is contested"
+    },
+    {
+      "id": "SAA-029",
+      "grade": "CONTESTED",
+      "domain": "conflict-risk",
+      "file": "SAA-029-anocracy-factionalism.md",
+      "title": "Anocracy + factionalism robustly forecasts instability, but the causal 'anocracy causes civil war' reading is partly a Polity coding artifact"
+    },
+    {
+      "id": "SAA-030",
+      "grade": "ROBUST",
+      "domain": "political-violence",
+      "file": "SAA-030-political-violence-overestimated.md",
+      "title": "Face-value survey estimates of US support for partisan violence are inflated by measurement error"
+    },
+    {
+      "id": "SAA-031",
+      "grade": "ROBUST",
+      "domain": "political-economy",
+      "file": "SAA-031-financial-crises-far-right.md",
+      "title": "Severe financial crises are systematically followed by far-right gains and political fragmentation"
+    },
+    {
+      "id": "SAA-032",
+      "grade": "CONTESTED",
+      "domain": "political-economy",
+      "file": "SAA-032-income-democracy.md",
+      "title": "Income-democracy correlation is robust (Lipset); the causal claim income→democratization is contested"
+    },
+    {
+      "id": "SAA-033",
+      "grade": "CONTESTED",
+      "domain": "political-economy",
+      "file": "SAA-033-inequality-democratic-erosion.md",
+      "title": "Inequality robustly correlates with democratic erosion risk, but causal direction and scope are contested"
+    },
+    {
+      "id": "SAA-034",
+      "grade": "CONTESTED",
+      "domain": "political-economy",
+      "file": "SAA-034-resource-curse.md",
+      "title": "Oil/mineral wealth correlates robustly with authoritarianism; the unconditional causal 'curse' is contested"
+    },
+    {
+      "id": "SAA-035",
+      "grade": "CONTESTED",
+      "domain": "political-economy",
+      "file": "SAA-035-trade-shock-polarization.md",
+      "title": "Import (China-shock) exposure raised far-right/populist voting in exposed regions — robust core, contested magnitude"
+    },
+    {
+      "id": "SAA-036",
+      "grade": "CONTESTED",
+      "domain": "systems-and-tech",
+      "file": "SAA-036-algorithmic-radicalization.md",
+      "title": "YouTube algorithmic rabbit-hole radicalization is contested; extremist consumption is mostly demand-driven"
+    },
+    {
+      "id": "SAA-037",
+      "grade": "ROBUST",
+      "domain": "democratic-backsliding",
+      "file": "SAA-037-executive-aggrandizement.md",
+      "title": "Modern democratic backsliding is mostly gradual executive aggrandizement, not coups"
+    },
+    {
+      "id": "SAA-038",
+      "grade": "ROBUST",
+      "domain": "epistemic-defense",
+      "file": "SAA-038-lateral-reading.md",
+      "title": "Lateral reading is the expert strategy for evaluating online sources, and teaching it improves judgments"
+    },
+    {
+      "id": "SAA-039",
+      "grade": "CONTESTED",
+      "domain": "political-economy",
+      "file": "SAA-039-institutions-prosperity.md",
+      "title": "Institutions-prosperity correlation is robust (AJR); the causal claim inclusive institutions→long-run prosperity is contested"
+    },
+    {
+      "id": "SAA-040",
+      "grade": "CONTESTED",
+      "domain": "conflict-risk",
+      "file": "SAA-040-conflict-forecasting-track-record.md",
+      "title": "Conflict/backsliding forecasting has a real, peer-reviewed out-of-sample track record — but 'beats a no-change baseline' is metric- and task-dependent, not a settled fact"
+    },
+    {
+      "id": "SAA-041",
+      "grade": "CONTESTED",
+      "domain": "social-change",
+      "file": "SAA-041-three-five-percent-rule.md",
+      "title": "The 3.5% rule is a strong descriptive tendency, not a law — its own author documents the exceptions and warns against prescriptive use"
+    }
+  ]
+}

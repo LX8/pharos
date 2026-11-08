@@ -1,0 +1,22 @@
+---
+id: SAA-027
+title: "Megastudies cut partisan animosity, but that does not reliably lower anti-democratic attitudes"
+grade: ROBUST
+domain: social-cohesion
+verified: 2026-06-18
+last_reviewed: 2026-06-18
+review_interval_days: 540
+sources:
+  - "Voelkel, J. G., Stagnaro, M. N., Chu, J. Y., et al. (2024). Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity. Science, 386(6719), eadh4764. — https://doi.org/10.1126/science.adh4764"
+  - "Voelkel, J. G., Chu, J., Stagnaro, M. N., et al. (2023). Interventions reducing affective polarization do not necessarily improve anti-democratic attitudes. Nature Human Behaviour, 7(1), 55-64. — https://doi.org/10.1038/s41562-022-01466-9"
+falsification_trigger: "A well-powered replication or re-analysis showing that, across a diverse treatment set, effects on partisan animosity are in fact strongly correlated (r >= ~0.4) with effects on support for undemocratic practices and partisan violence — i.e., that animosity reduction does causally and reliably transmit to anti-democratic attitudes — would refute layer (b). For layer (a), failure to reproduce broad, immediately-detectable animosity reductions in a comparable large sample would downgrade it."
+---
+
+## Claim
+Both layers are ROBUST. (a) In the N=32,059 Strengthening Democracy Challenge megastudy, 23 of 25 brief interventions significantly reduced partisan animosity, and 6 of 10 tested effects persisted at a ~2-week follow-up. (b) Reducing animosity did NOT reliably reduce anti-democratic attitudes or support for partisan violence: cross-treatment effect-size correlations were only r=0.25 (animosity vs. undemocratic practices) and r=-0.02 (animosity vs. partisan violence), versus the r approx 0.46-0.51 expert forecasters predicted — the constructs move largely independently. One caveat: "durably" is the claim's weakest word — all effects decayed substantially by 2 weeks (animosity to ~32% of original; only 1/10 anti-democratic effects endured), and the authors say a single short online treatment is "typically insufficient" for lasting change.
+
+## Evidence
+FOR: The 2024 Science megastudy (Voelkel et al., N=32,059, 25 treatments) directly reports both layers. Animosity reduction is broad and behaviorally validated — the feeling-thermometer measure correlated r=0.83 with a dictator-game behavioral measure; 23/25 treatments cut animosity. The dissociation is quantified within one design: animosity<->undemocratic-practices r=0.25, animosity<->partisan-violence r=-0.02, while academics/practitioners forecast r approx 0.46-0.51; authors conclude animosity "is not a unitary construct underpinning the psychology of" anti-democratic attitudes. This replicates the earlier confirmatory test (Voelkel et al. 2023, Nature Human Behaviour, N=8,385) which found three established depolarization interventions "reliably reduced affective polarization" but yielded "no compelling evidence" of reduced support for undemocratic candidates, partisan violence, or prioritizing partisan ends. AGAINST / limits: durability is weak — only 6/10 animosity and 1/10 anti-democratic effects survived 2 weeks; magnitudes decayed to 32%/7%/53%/42% of original for animosity, undemocratic practices, violence, and undemocratic candidates. Effects are single-exposure online survey treatments, not field/behavioral change; one threat-of-collapse treatment backfired on the most conservative Republicans (+2.29pp violence support). These bound the strength of "durably," not the dissociation itself.
+
+## Why it matters
+Strategically central for anyone resourcing pro-democracy work: the intuitive theory — that warming partisans toward each other inoculates democracy — is not supported. Cooling animosity is comparatively easy and was over-relied upon, but it is a poor lever on the outcomes that actually matter for authoritarian backsliding (support for election subversion, undemocratic candidates, political violence). Those require separate, directly targeted interventions (correcting meta-perceptions of outpartisans' anti-democratic intent, pro-democracy elite cues), and even then effects are modest and short-lived — implying structural/institutional, not one-shot informational, remedies. See [`SAA-026`](SAA-026-affective-polarization.md): both draw on the Voelkel 2024 megastudy, so the shared source is not double-counted — SAA-026 grades the measured polarization trend, this entry the *dissociation* between animosity and anti-democratic attitudes.

@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: 2026 The Pharos contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Two-track gate: the OFFLINE job is deterministic and authoritative (recomputes the
+# indicators from the committed snapshots with no network, fails on any drift); the
+# LIVE-DATA job is an informational upstream-schema watch.
+#
+# Runs on pushes to main, on pull requests, and on manual dispatch (GitHub Actions is free
+# on public repositories). The same gates also run locally through the free git hooks
+# (`make hooks` → pre-commit runs `make dashboard`, pre-push runs `make verify-offline`).
+name: verify
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    name: offline gate (deterministic, no network)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: verify-offline (recompute from snapshots, drift gate, tests, audits)
+        run: make verify-offline
+      - name: audit dashboard
+        run: make dashboard
+
+  citation:
+    name: validate CITATION.cff
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install cffconvert
+      - run: cffconvert --validate
+
+  live-data:
+    name: live-data smoke (non-blocking — upstream schema watch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    needs: offline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: recompute indicators from LIVE sources (WB API + OWID)
+        run: |
+          make indicators
+          make divergence

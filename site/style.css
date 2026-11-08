@@ -1,0 +1,398 @@
+/*
+SPDX-FileCopyrightText: 2026 The Pharos contributors
+SPDX-License-Identifier: CC-BY-SA-4.0
+
+Night-observatory theme: the page is a lighthouse — a calm, dark vantage with
+one warm beam. Dependency-free (system font stacks only), accessible, responsive,
+motion-respectful. No web fonts, no JS required.
+*/
+
+:root {
+  /* night palette */
+  --bg:        #090c12;
+  --bg-soft:   #0d1119;
+  --panel:     #111826;
+  --panel-2:   #16202f;
+  --ink:       #edece5;
+  --ink-soft:  #aab2c1;
+  --ink-faint: #7d869b;  /* lightened from #6c7589 for WCAG AA contrast on the dark panels */
+  --line:      rgba(236,239,247,0.085);
+  --line-2:    rgba(236,239,247,0.16);
+
+  /* the lighthouse beam */
+  --beam:      #eaab3c;
+  --beam-deep: #c8881f;
+  --beam-glow: rgba(234,171,60,0.55);
+  --beam-haze: rgba(234,171,60,0.10);
+
+  /* evidence grades */
+  --robust:    #54c184;
+  --contested: #e6b052;
+  --refuted:   #e76a52;
+
+  --max: 840px;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --sans:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.72 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+::selection { background: var(--beam-glow); color: #1a1206; }
+
+a {
+  color: var(--beam);
+  text-decoration: none;
+  border-bottom: 1px solid var(--beam-glow);
+  transition: color .15s, border-color .15s, background .15s;
+}
+a:hover { color: #ffd178; border-bottom-color: var(--beam); }
+a:focus-visible { outline: 2px solid var(--beam); outline-offset: 3px; border-radius: 2px; }
+
+p { margin: 0 0 1.05em; }
+b, strong { color: #fbf9f2; font-weight: 600; }
+em { color: var(--ink); }
+
+h1, h2, h3 { line-height: 1.15; letter-spacing: -.012em; font-weight: 600; }
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3.6vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -.01em;
+  margin: 2.9em 0 .7em;
+  padding-top: 1.4em;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: baseline;
+  gap: .6em;
+}
+h2 .num {
+  font: 600 .95rem/1 var(--sans);
+  color: var(--beam);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .12em;
+  padding: .42em .6em;
+  border: 1px solid var(--line-2);
+  border-radius: 7px;
+  flex: none;
+  transform: translateY(-.15em);
+}
+.muted { color: var(--ink-soft); }
+.small { font-size: .86rem; }
+
+/* ---- draft banner ---------------------------------------------------- */
+.banner {
+  background: linear-gradient(180deg, #14101a, #0f0c14);
+  color: var(--ink-soft);
+  text-align: center;
+  font-size: .8rem;
+  letter-spacing: .02em;
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.banner strong { color: var(--beam); font-weight: 600; }
+
+/* ---- hero ------------------------------------------------------------ */
+header.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 92px 0 52px;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(120% 90% at 88% -10%, var(--beam-haze), transparent 55%),
+    radial-gradient(90% 70% at 50% 120%, rgba(40,80,140,.10), transparent 60%);
+}
+/* the beam — soft cone of light raked across the hero, behind the words */
+.hero .beam-cone {
+  position: absolute;
+  top: -28%; right: -6%;
+  width: 70vw; max-width: 760px; height: 150%;
+  z-index: -1;
+  pointer-events: none;
+  background: conic-gradient(from 196deg at 92% 8%,
+    transparent 0deg,
+    var(--beam-haze) 6deg,
+    var(--beam-glow) 12deg,
+    var(--beam-haze) 18deg,
+    transparent 26deg);
+  filter: blur(8px);
+  transform-origin: 92% 8%;
+  animation: sweep 16s ease-in-out infinite;
+}
+@keyframes sweep {
+  0%, 100% { transform: rotate(-7deg); opacity: .7; }
+  50%      { transform: rotate(10deg); opacity: 1; }
+}
+/* the lamp glow at the source */
+.hero .lamp {
+  position: absolute;
+  top: clamp(40px, 7vw, 84px); right: clamp(24px, 9vw, 96px);
+  width: 14px; height: 14px; border-radius: 50%;
+  background: #fff3d6;
+  box-shadow: 0 0 0 4px rgba(234,171,60,.22), 0 0 28px 8px var(--beam-glow), 0 0 60px 18px var(--beam-haze);
+  z-index: -1;
+  animation: pulse 5.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: .85; } 50% { opacity: 1; transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero .beam-cone, .hero .lamp { animation: none; }
+}
+
+.eyebrow {
+  display: flex; align-items: center; gap: .7em;
+  font-size: .73rem; text-transform: uppercase; letter-spacing: .19em;
+  color: var(--beam); margin: 0 0 22px; font-weight: 600;
+}
+.eyebrow .mark { flex: none; color: var(--beam); opacity: .9; }
+.eyebrow .wn { color: var(--ink-faint); text-transform: none; letter-spacing: .01em; font-weight: 500; }
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 11vw, 5.4rem);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -.02em;
+  background: linear-gradient(180deg, #fff 12%, #f0d9a8 96%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  color: var(--beam); margin: .15em 0 .9em; font-weight: 500;
+}
+.lede { font-size: clamp(1.12rem, 2.4vw, 1.3rem); max-width: 30em; color: var(--ink); margin-bottom: 1.1em; }
+.rule {
+  font-size: .98rem; color: var(--ink-soft); margin: 0;
+  max-width: 34em; padding-left: 16px; border-left: 2px solid var(--beam-deep);
+}
+.rule b { color: #fff; }
+
+/* ---- main flow ------------------------------------------------------- */
+main { padding-bottom: 1em; }
+main h2:first-of-type { border-top: none; padding-top: .4em; }
+
+/* ---- the finding visual --------------------------------------------- */
+.finding {
+  background: linear-gradient(180deg, var(--panel), var(--bg-soft));
+  border: 1px solid var(--line-2);
+  border-radius: 18px;
+  padding: 26px 28px 24px;
+  margin: 1.6em 0;
+  box-shadow: 0 1px 0 rgba(255,255,255,.03) inset, 0 24px 48px -28px rgba(0,0,0,.7);
+}
+.finding-head { display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; }
+.bignum {
+  font: 600 clamp(3.2rem, 9vw, 4.6rem)/.9 var(--serif);
+  color: var(--beam);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+}
+.bignum span { font-size: .42em; color: var(--beam-deep); margin-left: .04em; }
+.finding-sub { flex: 1 1 16em; color: var(--ink-soft); margin: .3em 0 0; font-size: .98rem; }
+.finding-sub b { color: var(--ink); }
+
+.bar {
+  display: flex; height: 14px; margin: 22px 0 14px;
+  border-radius: 8px; overflow: hidden;
+  background: var(--panel-2); border: 1px solid var(--line);
+}
+.seg { height: 100%; }
+.seg-noise   { background: repeating-linear-gradient(45deg, #2a3346, #2a3346 6px, #232c3d 6px, #232c3d 12px); }
+.seg-decline { background: linear-gradient(180deg, var(--refuted), #c2543f); }
+.seg-improve { background: linear-gradient(180deg, var(--robust), #3f9c68); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0; padding: 0; list-style: none; font-size: .82rem; color: var(--ink-soft); }
+.legend li { display: flex; align-items: center; gap: .5em; }
+.sw { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.sw-noise   { background: #2a3346; }
+.sw-decline { background: var(--refuted); }
+.sw-improve { background: var(--robust); }
+.finding-note { margin: 16px 0 0; font-size: .92rem; color: var(--ink-soft); }
+.finding-note b { color: var(--beam); font-weight: 600; }
+
+/* ---- cards ----------------------------------------------------------- */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.5em 0; }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+.card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.card::before {
+  content: ""; position: absolute; left: 0; top: 18px; bottom: 18px;
+  width: 2px; border-radius: 2px; background: var(--beam-deep); opacity: 0; transition: opacity .18s;
+}
+.card:hover { transform: translateY(-3px); border-color: var(--line-2); background: var(--panel-2); }
+.card:hover::before { opacity: 1; }
+.card h3 { margin: 0 0 .35em; font-size: 1.05rem; color: #fff; }
+.card p { margin: 0; color: var(--ink-soft); font-size: .93rem; }
+
+/* ---- grade pills ----------------------------------------------------- */
+.grade {
+  display: inline-block; font: 600 .72rem/1 var(--sans);
+  letter-spacing: .05em; padding: .32em .55em; border-radius: 5px;
+  vertical-align: middle;
+}
+.g-robust    { color: var(--robust);    background: rgba(84,193,132,.12);  border: 1px solid rgba(84,193,132,.3); }
+.g-contested { color: var(--contested); background: rgba(230,176,82,.12);  border: 1px solid rgba(230,176,82,.3); }
+.g-refuted   { color: var(--refuted);   background: rgba(231,106,82,.12);  border: 1px solid rgba(231,106,82,.3); }
+.g-open      { color: var(--ink-soft);  background: rgba(170,178,193,.10); border: 1px solid rgba(170,178,193,.3); }
+
+/* ---- skip link (keyboard control) ------------------------------------ */
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  /* Stacks above the sticky section nav (z-index 20) as a defensive invariant. CORRECTION
+     (on the record, per this project's discipline): an earlier commit claimed the focused
+     skip link "rendered underneath the nav bar" at z-index 10 — that regression was
+     impossible (.skip is absolute at document top; .secnav is sticky below a tall hero;
+     they never overlap at any scroll position). The ordering is kept because future sticky
+     chrome at the top edge WOULD collide; the historical claim is retracted. */
+  z-index: 30; padding: 10px 16px; border-radius: 0 0 8px 0;
+  background: var(--beam); color: #1a1206; font-weight: 600; border-bottom: none;
+}
+.skip:focus { left: 0; }
+
+/* ---- disclosure folds (pure-HTML controls, no JS) --------------------- */
+details.fold {
+  margin: 1.4em 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 20px;
+  transition: border-color .18s;
+}
+details.fold[open] { border-color: var(--line-2); }
+details.fold summary {
+  cursor: pointer;
+  padding: 14px 0;
+  font-weight: 600;
+  color: var(--ink);
+  list-style-position: outside;
+}
+details.fold summary::marker { color: var(--beam); }
+details.fold summary:hover { color: #ffd178; }
+details.fold summary:focus-visible { outline: 2px solid var(--beam); outline-offset: 3px; border-radius: 4px; }
+details.fold > p, details.fold > dl { margin-top: 2px; margin-bottom: 16px; color: var(--ink-soft); font-size: .95rem; }
+
+/* ---- grade legend ------------------------------------------------------ */
+dl.grades { margin: 6px 0 14px; }
+dl.grades dt { margin: 12px 0 2px; }
+dl.grades dd { margin: 0 0 4px; color: var(--ink-soft); font-size: .93rem; }
+
+/* ---- references -------------------------------------------------------- */
+ul.refs { margin: 0 0 1.2em; padding-left: 1.15em; }
+ul.refs li { margin: 0 0 .55em; color: var(--ink-soft); font-size: .92rem; }
+ul.refs li a { color: var(--beam); }
+ul.refs li em { color: var(--ink-soft); }
+
+/* ---- the one rule (covenant) ---------------------------------------- */
+blockquote {
+  margin: 1.2em 0; padding: 22px 26px;
+  font-family: var(--serif); font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 600; letter-spacing: -.01em; color: #fff;
+  background: linear-gradient(110deg, rgba(234,171,60,.10), transparent 70%);
+  border: 1px solid var(--line-2);
+  border-left: 3px solid var(--beam);
+  border-radius: 0 14px 14px 0;
+}
+
+/* ---- inline code chips in body copy ---------------------------------- */
+main code {
+  background: var(--panel-2); color: var(--ink);
+  padding: 2px 7px; border-radius: 5px; font-size: .85em;
+  border: 1px solid var(--line);
+}
+
+/* ---- footer ---------------------------------------------------------- */
+footer {
+  margin-top: 4em;
+  border-top: 1px solid var(--line);
+  padding: 34px 0 72px;
+  color: var(--ink-soft);
+  font-size: .9rem;
+  background: radial-gradient(80% 120% at 50% 140%, var(--beam-haze), transparent 60%);
+}
+footer .lic { margin-bottom: 1em; }
+footer .lic code {
+  background: var(--panel-2); color: var(--ink);
+  padding: 2px 7px; border-radius: 5px; font-size: .82em;
+  border: 1px solid var(--line);
+}
+footer .small { color: var(--ink-faint); }
+
+/* Section nav — a long single page needs a way to orient and to jump. Sticky, pure CSS
+   (this site ships no JavaScript), horizontally scrollable on narrow screens so it never
+   wraps into a wall of links. Section ids also make every section deep-linkable. */
+.secnav {
+  position: sticky; top: 0; z-index: 20;
+  /* solid first as the fallback: a browser without color-mix would otherwise leave the bar
+     transparent and let body text scroll through it. */
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.secnav-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 24px;
+  display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
+}
+.secnav-inner::-webkit-scrollbar { display: none; }
+.secnav a {
+  flex: 0 0 auto; display: inline-flex; align-items: baseline; gap: .45em;
+  padding: .72em .7em; font-size: .82rem; color: var(--ink-faint);
+  text-decoration: none; border-bottom: 2px solid transparent; white-space: nowrap;
+}
+.secnav a:hover { color: var(--ink); border-bottom-color: var(--beam-deep); }
+/* :target styling gives the visited section a persistent marker after a jump. */
+.secnav a:focus-visible { outline: 2px solid var(--beam); outline-offset: -2px; border-radius: 2px; }
+.secnav-n { font-variant-numeric: tabular-nums; font-size: .72rem; color: var(--beam); opacity: .8; }
+/* Sticky nav would otherwise hide the heading it just scrolled to. */
+main h2 { scroll-margin-top: 4.2rem; }
+@media (max-width: 600px) {
+  .secnav a { padding: .66em .55em; font-size: .78rem; }
+}
+
+/* Hero call to action. The page previously gave a convinced stranger nothing to do; these are
+   plain links (no JS, per the site's no-script rule). Each state sets its own border-color so
+   the global `a:hover` bottom-border cannot leak through. */
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 1.6em 0 0; }
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .72em 1.15em; border-radius: 10px;
+  font: 600 .95rem/1 var(--sans); letter-spacing: .01em;
+  border: 1px solid transparent; text-decoration: none;
+  transition: background .15s, border-color .15s, color .15s, transform .15s ease;
+}
+.btn-primary { background: var(--beam); color: #1a1206; border-color: var(--beam-deep); }
+.btn-primary:hover { background: #ffd178; color: #1a1206; border-color: var(--beam-deep); transform: translateY(-2px); }
+.btn-ghost { color: var(--ink); background: transparent; border-color: var(--line-2); }
+.btn-ghost:hover { color: #ffd178; background: var(--beam-haze); border-color: var(--beam); transform: translateY(-2px); }
+.btn:focus-visible { outline: 2px solid var(--beam); outline-offset: 3px; }
+
+/* Reading measure: body prose ran the full 840px (~93 characters), well past the 60–75 that
+   reads comfortably. Narrow the text rivers but leave the evidence objects (.finding, .grid,
+   .bar, blockquote) full width — that asymmetry is the layout doing something deliberate. */
+main > p, details.fold > p, dl.grades dd, ul.refs li { max-width: 66ch; }
+
+/* A steady light, not a sweeping searchlight: a scanning beam is a surveillance gesture, and
+   this project's one rule is watch power, not people. The lamp keeps the faintest breath. */
+.hero .beam-cone { animation: none; transform: rotate(2deg); opacity: .82; }
+.hero .lamp { animation: lamp-breath 14s ease-in-out infinite; }
+@keyframes lamp-breath { 0%, 100% { opacity: .8 } 50% { opacity: .95 } }
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover { transform: none; }
+  .hero .lamp { animation: none; }
+}

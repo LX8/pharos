@@ -1,0 +1,345 @@
+{
+  "indicator_set": "Pharos-forecast v0 \u2014 backsliding backtest (V-Dem freedom of expression)",
+  "mode": "offline-snapshot",
+  "input_provenance": {
+    "source_url": "https://ourworldindata.org/grapher/freedom-of-expression-index.csv?v=1&csvType=full&useColumnShortNames=true",
+    "fetched_utc": "2026-06-18T04:35:36+00:00",
+    "input_sha256": "sha256:5f734319cdbe665c61040969670547366fa6b0fbc46b9c84376a964f6a32a33a"
+  },
+  "pre_registered": {
+    "horizon_years": 10,
+    "lookback": 10,
+    "delta": 0.05,
+    "origins": [
+      2000,
+      2014
+    ],
+    "success_bar": "skill > 0 vs the no-change baseline (CRPS and Brier), with calibration"
+  },
+  "scoring": "CRPS (Gneiting & Raftery 2007) + Brier (1950); skill vs no-change baseline",
+  "result": {
+    "sigma": 0.1709,
+    "base_rate": 0.2673,
+    "n_forecasts": 2600,
+    "per_model": {
+      "no_change": {
+        "crps": 0.07719,
+        "brier": 0.21102,
+        "reliability": [
+          [
+            0.3,
+            0.4,
+            2600,
+            0.384,
+            0.267
+          ]
+        ],
+        "crps_skill": 0.0,
+        "brier_skill": 0.0
+      },
+      "trend": {
+        "crps": 0.11656,
+        "brier": 0.23362,
+        "reliability": [
+          [
+            0.0,
+            0.1,
+            317,
+            0.028,
+            0.281
+          ],
+          [
+            0.1,
+            0.2,
+            208,
+            0.155,
+            0.351
+          ],
+          [
+            0.2,
+            0.3,
+            323,
+            0.255,
+            0.266
+          ],
+          [
+            0.3,
+            0.4,
+            1136,
+            0.366,
+            0.208
+          ],
+          [
+            0.4,
+            0.5,
+            318,
+            0.44,
+            0.327
+          ],
+          [
+            0.5,
+            0.6,
+            97,
+            0.538,
+            0.412
+          ],
+          [
+            0.6,
+            0.7,
+            69,
+            0.645,
+            0.232
+          ],
+          [
+            0.7,
+            0.8,
+            39,
+            0.749,
+            0.41
+          ],
+          [
+            0.8,
+            0.9,
+            37,
+            0.844,
+            0.432
+          ],
+          [
+            0.9,
+            1.0,
+            56,
+            0.955,
+            0.339
+          ]
+        ],
+        "crps_skill": -0.51,
+        "brier_skill": -0.1071
+      },
+      "damped_trend": {
+        "crps": 0.09041,
+        "brier": 0.21852,
+        "reliability": [
+          [
+            0.0,
+            0.1,
+            135,
+            0.045,
+            0.326
+          ],
+          [
+            0.1,
+            0.2,
+            158,
+            0.15,
+            0.253
+          ],
+          [
+            0.2,
+            0.3,
+            298,
+            0.26,
+            0.332
+          ],
+          [
+            0.3,
+            0.4,
+            1482,
+            0.367,
+            0.225
+          ],
+          [
+            0.4,
+            0.5,
+            342,
+            0.434,
+            0.333
+          ],
+          [
+            0.5,
+            0.6,
+            88,
+            0.541,
+            0.318
+          ],
+          [
+            0.6,
+            0.7,
+            43,
+            0.64,
+            0.442
+          ],
+          [
+            0.7,
+            0.8,
+            40,
+            0.744,
+            0.4
+          ],
+          [
+            0.8,
+            0.9,
+            14,
+            0.858,
+            0.143
+          ]
+        ],
+        "crps_skill": -0.1712,
+        "brier_skill": -0.0355
+      },
+      "reversion": {
+        "crps": 0.07802,
+        "brier": 0.22692,
+        "reliability": [
+          [
+            0.1,
+            0.2,
+            239,
+            0.17,
+            0.117
+          ],
+          [
+            0.2,
+            0.3,
+            337,
+            0.246,
+            0.27
+          ],
+          [
+            0.3,
+            0.4,
+            346,
+            0.357,
+            0.338
+          ],
+          [
+            0.4,
+            0.5,
+            929,
+            0.454,
+            0.337
+          ],
+          [
+            0.5,
+            0.6,
+            749,
+            0.527,
+            0.195
+          ]
+        ],
+        "crps_skill": -0.0107,
+        "brier_skill": -0.0753
+      },
+      "climatology": {
+        "crps": 0.08965,
+        "brier": 0.19294,
+        "reliability": [
+          [
+            0.1,
+            0.2,
+            171,
+            0.194,
+            0.123
+          ],
+          [
+            0.2,
+            0.3,
+            2429,
+            0.25,
+            0.277
+          ]
+        ],
+        "crps_skill": -0.1614,
+        "brier_skill": 0.0857
+      },
+      "climatology_per_country": {
+        "crps": 0.12204,
+        "brier": 0.23619,
+        "reliability": [
+          [
+            0.0,
+            0.1,
+            470,
+            0.037,
+            0.277
+          ],
+          [
+            0.1,
+            0.2,
+            290,
+            0.152,
+            0.41
+          ],
+          [
+            0.2,
+            0.3,
+            333,
+            0.253,
+            0.303
+          ],
+          [
+            0.3,
+            0.4,
+            1072,
+            0.364,
+            0.19
+          ],
+          [
+            0.4,
+            0.5,
+            223,
+            0.44,
+            0.381
+          ],
+          [
+            0.5,
+            0.6,
+            59,
+            0.549,
+            0.22
+          ],
+          [
+            0.6,
+            0.7,
+            60,
+            0.641,
+            0.1
+          ],
+          [
+            0.7,
+            0.8,
+            34,
+            0.745,
+            0.176
+          ],
+          [
+            0.8,
+            0.9,
+            34,
+            0.855,
+            0.618
+          ],
+          [
+            0.9,
+            1.0,
+            25,
+            0.953,
+            0.4
+          ]
+        ],
+        "crps_skill": -0.581,
+        "brier_skill": -0.1193
+      }
+    }
+  },
+  "best_model": {
+    "name": "reversion",
+    "crps_skill": -0.0107
+  },
+  "verdict": "does NOT beat the no-change/climatology baselines (the honest, pre-registered result)",
+  "ethical_note": "Country/institution-level, retrodictive backtest \u2014 watch power, not people (NOTICE \u00a77, THREAT_MODEL.md).",
+  "license": {
+    "code": "GPL-3.0-or-later",
+    "data": "CC0-1.0",
+    "vdem": "CC BY 4.0 (V-Dem, processed by Our World in Data)"
+  }
+}

@@ -1,0 +1,58 @@
+# This CITATION.cff file is rendered by GitHub as a "Cite this repository"
+# widget. It also feeds Zenodo, DataCite, and downstream citation tools.
+#
+# Spec: https://citation-file-format.github.io
+cff-version: 1.2.0
+message: >-
+  Pharos is a project for the public, built for the good of humanity and
+  the environment. If you use it — the research synthesis, the evidence
+  ledger, the tools, or any derived analysis — please cite it as below.
+  Third-party datasets analysed here (the World Bank Worldwide Governance
+  Indicators; V-Dem and Freedom House, both via Our World in Data) must be
+  cited separately under their own terms.
+
+title: "Science Against Authoritarianism"
+abstract: >-
+  An open-science research project asking what science — as a method
+  (falsifiability, reproducibility, open data) and as an institution —
+  can measurably do to contain political violence and the growth of
+  authoritarianism worldwide. The project synthesises evidence across
+  four lenses (epistemic defense / open science; the social science of
+  violence and democratic backsliding; systems & technology; political
+  economy & institutions), separates replicated findings from contested
+  and speculative ones, and culminates in the design of a concrete,
+  falsifiable, openly-licensed initiative built on open conflict and
+  democracy datasets.
+type: software
+version: "0.7.0"
+date-released: "2026-11-08"
+
+# Multi-license: prose and reports under CC-BY-SA-4.0, code under
+# GPL-3.0-or-later, derived numerical data under CC0-1.0. See LICENSE and
+# the LICENSES/ folder for canonical texts; REUSE.toml maps each file.
+license:
+  - CC-BY-SA-4.0
+  - GPL-3.0-or-later
+  - CC0-1.0
+
+repository-code: "https://github.com/LX8/pharos"
+url: "https://github.com/LX8/pharos"
+
+authors:
+  - name: "The Pharos contributors"
+
+keywords:
+  - "democratic backsliding"
+  - "authoritarianism"
+  - "political violence"
+  - "disinformation"
+  - "prebunking"
+  - "civil resistance"
+  - "conflict early warning"
+  - "open science"
+  - "reproducible research"
+  - "ACLED"
+  - "V-Dem"
+  - "UCDP"
+  - "GDELT"
+  - "computational social science"

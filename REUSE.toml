@@ -1,0 +1,123 @@
+# SPDX-FileCopyrightText: 2026 The Pharos contributors
+# SPDX-License-Identifier: CC0-1.0
+#
+# REUSE.toml — machine-readable license map.
+# See https://reuse.software for the specification and tooling.
+#
+# Concept: every file resolves to exactly one SPDX license. Per-file SPDX
+# headers in source files take precedence over the glob rules below; this
+# file covers everything that does not carry an inline SPDX header
+# (reports, prose, license texts, metadata).
+
+version = 1
+SPDX-PackageName = "Science Against Authoritarianism"
+SPDX-PackageSupplier = "The Pharos contributors"
+SPDX-PackageDownloadLocation = "https://github.com/LX8/pharos"
+
+
+# ---------------------------------------------------------------------------
+# Reports, prose, research deliverables — CC-BY-SA-4.0
+# ---------------------------------------------------------------------------
+[[annotations]]
+path = [
+    "README.md",
+    "REPORT.md",
+    "ledger/**.md",
+    "docs/**",
+    "AUTHORS",
+    "NOTICE",
+    "CITATION.cff",
+    ".zenodo.json",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 The Pharos contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+
+# ---------------------------------------------------------------------------
+# Code — GPL-3.0-or-later
+# Analysis scripts, notebooks, tests, build tooling, CI workflows.
+# ---------------------------------------------------------------------------
+[[annotations]]
+path = [
+    "src/**.py",
+    "tests/**.py",
+    "Makefile",
+    ".github/workflows/**",
+    ".githooks/**",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 The Pharos contributors"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+
+# ---------------------------------------------------------------------------
+# Repository governance — GitHub templates (prose) — CC-BY-SA-4.0
+# (workflows are covered by the code block above; these are the human-facing bits)
+# ---------------------------------------------------------------------------
+[[annotations]]
+path = [
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/**",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 The Pharos contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+
+# ---------------------------------------------------------------------------
+# Derived data — CC0 1.0
+# Numerical outputs and fact tables computed from open datasets. The source
+# datasets themselves keep their own licenses (see LICENSE) and are not
+# redistributed under CC0.
+# ---------------------------------------------------------------------------
+[[annotations]]
+path = [
+    "data/derived/**.csv",
+    "data/derived/**.json",
+    "data/expected_counts.json",
+    "ledger/**.json",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 The Pharos contributors"
+SPDX-License-Identifier = "CC0-1.0"
+
+
+# ---------------------------------------------------------------------------
+# Pinned raw INPUTS (snapshots) — third-party open data kept under upstream
+# terms (NOT CC0). They are redistributed here only to make the pipeline
+# reproducible offline; cite the original producers.
+# ---------------------------------------------------------------------------
+[[annotations]]
+path = ["data/snapshots/wgi_raw.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "World Bank — Worldwide Governance Indicators"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = ["data/snapshots/vdem_freexp.csv", "data/snapshots/vdem_freexp_annual.csv", "data/snapshots/vdem_freexp_realized_*.csv"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "V-Dem Institute (Varieties of Democracy), processed by Our World in Data"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = ["data/snapshots/fh_civlibs.csv"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Freedom House — Freedom in the World, processed by Our World in Data"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+
+# ---------------------------------------------------------------------------
+# License index and metadata — CC0 by convention (the texts in LICENSES/ are
+# excluded by the REUSE specification).
+# ---------------------------------------------------------------------------
+[[annotations]]
+path = [
+    "LICENSE",
+    ".gitignore",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "NONE"
+SPDX-License-Identifier = "CC0-1.0"

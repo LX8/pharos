@@ -1,0 +1,12 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: 2026 The Pharos contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Free, local CI — runs the deterministic offline gate (recompute the indicators
+# from the pinned snapshots with NO network, drift-check, tests, ledger + honesty
+# audits) before each push. No cloud, no billing.
+# Install once with:  make hooks
+# Bypass once with:    git push --no-verify
+cd "$(git rev-parse --show-toplevel)" || exit 1
+echo "[pre-push] make verify-offline"
+exec make verify-offline

@@ -1,0 +1,45 @@
+{
+  "title": "Science Against Authoritarianism",
+  "version": "0.7.0",
+  "publication_date": "2026-11-08",
+  "description": "An open-science research project asking what science - as a method (falsifiability, reproducibility, open data) and as an institution - can measurably do to contain political violence and the growth of authoritarianism worldwide. Synthesises evidence across four lenses (epistemic defense / open science; the social science of violence and democratic backsliding; systems and technology; political economy and institutions), separates replicated findings from contested and speculative ones, and culminates in the design of a concrete, falsifiable, openly-licensed initiative built on open conflict and democracy datasets (ACLED, V-Dem, UCDP, GDELT, Freedom House).",
+  "creators": [
+    {
+      "name": "The Pharos contributors"
+    }
+  ],
+  "keywords": [
+    "democratic backsliding",
+    "authoritarianism",
+    "political violence",
+    "disinformation",
+    "prebunking",
+    "civil resistance",
+    "conflict early warning",
+    "open science",
+    "reproducible research",
+    "computational social science",
+    "ACLED",
+    "V-Dem",
+    "UCDP",
+    "GDELT"
+  ],
+  "license": "GPL-3.0-or-later",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "communities": [
+    {
+      "identifier": "open-science"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/LX8/pharos",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Multi-licensed: prose and reports under CC BY-SA 4.0, code under GPL-3.0-or-later, derived numerical outputs under CC0 1.0. Small pinned extracts of third-party data (World Bank WGI; V-Dem and Freedom House via Our World in Data) are redistributed in data/snapshots/ under their upstream licences, only for offline reproducibility; cite the original producers. See LICENSE, LICENSES/, NOTICE, and REUSE.toml. The NOTICE file includes the project's ethical-use covenant (Section 7): a good-faith request, not a licence condition, that the work not be used for surveillance, predictive policing, or coercion."
+}
