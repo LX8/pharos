@@ -6,7 +6,7 @@ The verified media/public mechanism (IMPACT.md claim 6, SUPPORTED) is a NAMED, s
 artifact on a fixed cadence — the Doomsday Clock pattern. This prototypes that artifact from
 the committed data so the machinery exists the day the founder decides the two things only
 the founder can: the public name and the fixed date. The carryable single object is the
-WATCH LIST — the countries where all three independent instruments concur, at significance,
+WATCH LIST — the countries where all three instruments concur, at significance,
 that civic voice is declining.
 
 Same contract as brief.py / ledger_digest.py: deterministic (no clock — the edition label
@@ -70,8 +70,8 @@ SPDX{'-'}License-Identifier: CC-BY-SA-4.0
 
 ## The Watch List — {len(watch)} countries
 
-The one object this report exists to carry: the countries where **all three independent
-instruments** (World Bank, V-Dem, Freedom House) **concur, each at its own significance
+The one object this report exists to carry: the countries where **all three
+instruments** (World Bank, V-Dem, Freedom House — overlapping, not independent) **concur, each at its own significance
 bar, that civic voice declined** over {window}. Not a score, not a blend — a concurrence.
 
 > {", ".join(watch)}.

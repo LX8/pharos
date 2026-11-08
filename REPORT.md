@@ -304,7 +304,7 @@ own claims honestly is the discipline fascism cannot practice.
 ## Part IV — Design of a new initiative
 
 > **PHAROS** — *an open, falsifiable early-warning observatory for
-> democratic resilience.* Working name; the umbrella project is
+> democratic resilience.* The initiative's name; the umbrella project is
 > *Science Against Authoritarianism* (repository: `LX8/pharos`). "Pharos" = the lighthouse of
 > Alexandria: a beacon that **warns without targeting** and is **visible
 > to everyone** — the opposite of a surveillance tower.

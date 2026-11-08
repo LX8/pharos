@@ -2,40 +2,39 @@
 <!--
 SPDX-FileCopyrightText: 2026 The Pharos contributors
 SPDX-License-Identifier: CC-BY-SA-4.0
-Working draft of the project's public landing page. NOT deployed — see site/README.md.
+The project's public landing page, published with GitHub Pages at https://lx8.github.io/pharos/ (see site/README.md).
 -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090c12">
-  <title>Aty Guasu — open, honest science against authoritarianism</title>
+  <title>Pharos — open, honest science against authoritarianism</title>
   <meta name="description" content="An open, reproducible evidence commons for containing authoritarianism — cited only to what is measured, bound by one rule: watch power, not people.">
 
-  <!-- Social card. Without these a shared link unfurls as a bare URL. The domain-independent
-       tags work today; og:url / og:image / canonical need an absolute origin, and the domain
-       (like the name) is still undecided — asserting an unregistered domain would be
-       a false claim on a page about not making false claims. At gate-open, set the origin and
-       uncomment the block below, then ship a 1200x630 social-card.png. -->
+  <!-- Social card. Without these a shared link unfurls as a bare URL. The page is published at
+       https://lx8.github.io/pharos/, so canonical and og:url point there. og:image and
+       twitter:image wait for a 1200x630 social-card.png (see the commented block below); when it
+       ships, also add it to the cp line and the paths filter in .github/workflows/pages.yml. -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Aty Guasu">
+  <meta property="og:site_name" content="Pharos">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="An evidence commons that publishes its own noise floor">
   <meta property="og:description" content="Governance evidence with the uncertainty kept in the headline: 88% of a decade's measured change is within measurement noise. Graded, falsifiable, reproducible offline. Watch power, not people.">
-  <!-- 'summary' until social-card.png ships at gate-open — declaring a large-image card
-       with no image renders broken on several platforms; flip with the ORIGIN block below. -->
+  <!-- 'summary' until social-card.png ships — declaring a large-image card with no image
+       renders broken on several platforms; flip it together with the image block below. -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="An evidence commons that publishes its own noise floor">
   <meta name="twitter:description" content="88% of a decade's measured governance change is within measurement noise — and we lead with that. Graded, falsifiable, reproducible offline.">
-  <!-- At gate-open, replace ORIGIN and uncomment:
-  <link rel="canonical" href="ORIGIN/">
-  <meta property="og:url" content="ORIGIN/">
-  <meta property="og:image" content="ORIGIN/social-card.png">
+  <link rel="canonical" href="https://lx8.github.io/pharos/">
+  <meta property="og:url" content="https://lx8.github.io/pharos/">
+  <!-- When social-card.png ships, uncomment this block and set twitter:card to summary_large_image:
+  <meta property="og:image" content="https://lx8.github.io/pharos/social-card.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Aty Guasu — 88% of a decade's measured governance change is within measurement noise.">
-  <meta name="twitter:image" content="ORIGIN/social-card.png">
+  <meta property="og:image:alt" content="Pharos — 88% of a decade's measured governance change is within measurement noise.">
+  <meta name="twitter:image" content="https://lx8.github.io/pharos/social-card.png">
   -->
 
   <!-- Favicon: the hero lighthouse mark, inline as a data URI — no extra file, no request. -->
@@ -44,7 +43,6 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="banner"><span aria-hidden="true">🚧</span> <strong>Working draft</strong> — this landing page is not deployed yet. The lighthouse is built; it is not lit yet.</div>
 
   <header class="hero">
     <span class="beam-cone" aria-hidden="true"></span>
@@ -59,10 +57,9 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
           <path d="M11 5.4 L15.2 4 M11 6.6 L15.2 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".6"/>
         </svg>
         <span>Open evidence commons · containing authoritarianism</span>
-        <span class="wn">· the name below is a working name — your call</span>
       </p>
-      <h1>Aty Guasu</h1>
-      <p class="subtitle">The Great Assembly</p>
+      <h1>Pharos</h1>
+      <p class="subtitle">Science against authoritarianism</p>
       <p class="lede">Open, honest science for containing authoritarianism — with the uncertainty in the headline, not the footnote: <b>88%</b> of a decade of measured governance change is within measurement noise.</p>
       <p class="rule">Built in the open. <b>Cited only to what is measured.</b> Bound by one rule: <b>watch power, not people.</b></p>
       <p class="cta">
@@ -115,12 +112,13 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
 
     <p>We flag a change <em>only</em> when it beats its 90% confidence interval &mdash; and the voice
       decline survives the stricter 95% bar too. And we don&rsquo;t ask you to trust one number: we put the
-      same question to <b>three independent instruments</b> (the World Bank, V-Dem, and Freedom House) and
+      same question to <b>three instruments</b> (the World Bank, V-Dem, and Freedom House &mdash; overlapping, not
+      independent: V-Dem feeds the World Bank&rsquo;s aggregate) and
       publish <b>where they agree and where they conflict</b>. Every instrument that registers a
       significant change concurs on a decline in voice in <b>45 countries</b> &mdash; none dissenting, and
-      in <b>26</b> of them all three are independently significant; the handful where they genuinely
-      disagree are flagged as conflicts, never averaged into a false consensus. A gamed single source
-      surfaces as a conflict, not a clean number.</p>
+      in <b>26</b> of them all three are significant on their own; the handful where they genuinely
+      disagree are flagged as conflicts, never averaged into a false consensus. A gamed single
+      non-overlapping source surfaces as a conflict, not a clean number.</p>
 
     <details class="fold">
       <summary>How the measurement works &mdash; in one paragraph</summary>
@@ -140,25 +138,26 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
     <div class="grid">
       <div class="card"><h3>The Evidence Ledger</h3><p>41 graded, falsifiable evidence entries
         (<span class="grade g-robust">ROBUST</span> <span class="grade g-contested">CONTESTED</span>
-        <span class="grade g-refuted">REFUTED</span>), each with a pre-registered falsification trigger and
+        <span class="grade g-refuted">REFUTED</span> <span class="grade g-open">OPEN</span>), each with a pre-registered falsification trigger and
         a machine-checked structure. A generated <b>falsification watch</b> gathers every trigger in one
         place, and each entry&rsquo;s next-review date goes stale loudly, not silently.</p></div>
       <div class="card"><h3>The Forecast</h3><p>A calibration layer, not a hero call: pre-registered
         backsliding forecasts, scored against a no-change baseline &mdash; honest enough to tell you it
         doesn&rsquo;t beat that baseline <em>yet</em> (see &sect;&nbsp;03).</p></div>
       <div class="card"><h3>The Indicators</h3><p>Governance change across six dimensions, computed with
-        honest uncertainty &mdash; then <em>triangulated</em> against V-Dem and Freedom House to publish
-        divergence, never a single score.</p></div>
+        honest uncertainty, with Voice &amp; Accountability <em>triangulated</em> against V-Dem and
+        Freedom House to publish divergence, never a single score.</p></div>
       <div class="card"><h3>The Simulators</h3><p>Seven validated mechanisms of social change &mdash; each
         reproduces a <em>published</em> result via a unit test (threshold and network cascades, the
         committed-minority tipping point, reverse dominance, complex contagion, the legitimacy tipping
         point, and bounded-confidence opinion dynamics).</p></div>
-      <div class="card"><h3>Self-auditing</h3><p>Every public number is machine-checked &mdash;
+      <div class="card"><h3>Self-auditing</h3><p>Every headline figure is machine-checked &mdash;
         structure, freshness, an overstatement guard, a count-consistency gate, and a
-        <em>spatial-floor</em> gate that blocks any data below country level &mdash; all reproducible
+        <em>spatial-floor</em> gate that fails the build on data columns or labels below country level &mdash; all reproducible
         offline, one command, no network. Beyond the gates, the whole corpus has been put through
-        adversarial review: every citation web-verified, every formula independently re-derived.</p></div>
-      <div class="card"><h3>What&nbsp;is&nbsp;tested</h3><p>A tiering map of every claim, from
+        adversarial review: every citation web-verified, every load-bearing formula independently re-implemented (5 of 6
+        bit-exact; the sixth exposed a rounding bug, since fixed).</p></div>
+      <div class="card"><h3>What&nbsp;is&nbsp;tested</h3><p>A tiering map of every load-bearing claim, from
         machine-verified down to honestly untestable. Nothing claims a tier it hasn&rsquo;t earned.</p></div>
     </div>
 
@@ -186,18 +185,19 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
         a forecast whose published headline is its own negative result, and adversarial review rounds whose
         findings against <em>our own work</em> are documented with their fixes. <b>Byte-exact
         reproduction</b> &mdash; one command recomputes everything from pinned snapshots with no network and
-        fails on any drift between code, data, and prose. <b>Pre-registered falsifiability</b> &mdash; every
+        fails on drift between code, data, and the pinned figures in the prose. <b>Pre-registered falsifiability</b> &mdash; every
         entry&rsquo;s &ldquo;what would change our minds&rdquo; collected in one watchlist.
         <b>Uncertainty as the headline</b> &mdash; the noise floor is the most prominent number we publish,
         and disagreement between instruments is surfaced, never blended. <b>No funder to please</b> &mdash;
         currently unfunded and independent; if that ever changes, disclosure comes first.</p>
       <p>The full list, one verification command per signal, ships in the repo as
-        <code>docs/TRUST_SIGNALS.md</code>. The one-command version: <code>make verify-offline</code>.</p>
+        <a href="https://github.com/LX8/pharos/blob/main/docs/TRUST_SIGNALS.md"><code>docs/TRUST_SIGNALS.md</code></a>. The one-command version: <code>make verify-offline</code>.</p>
     </details>
 
     <h2 id="forecast"><span class="num" aria-hidden="true">03</span>What honesty looks like in a forecast</h2>
     <p>Anyone can publish a scary prediction. The hard, trustworthy thing is to <b>score yourself in the
-      open.</b> So the forecasting pillar runs <b>2,600 pre-registered</b> backsliding forecasts and grades
+      open.</b> So the forecasting pillar runs <b>2,600 pre-registered</b> backsliding forecasts &mdash; a backtest over 2000&ndash;2014
+      origins, its design fixed before scoring &mdash; and grades
       them with proper scoring rules against two dead-simple baselines &mdash; assume <b>no change</b>, or
       just predict the long-run base rate &mdash; then reports the result plainly:</p>
     <blockquote>Our models beat <b>neither</b> baseline yet &mdash; and we say so, in public.</blockquote>
@@ -207,7 +207,7 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
       believe when it says something <em>is</em>.</p>
 
     <h2 id="how-it-works"><span class="num" aria-hidden="true">04</span>How it works &mdash; the lighthouse, not the dragnet</h2>
-    <p>Durable change comes when a committed minority reaches a critical mass and a cascade spreads
+    <p>Durable change can come when a committed minority reaches a critical mass and a cascade spreads
       &mdash; but that cascade runs on <em>trusted, reinforcing signal</em>, exactly what disinformation
       destroys. So we don&rsquo;t aggregate or surveil people. We build a true, open, reusable thing that
       aligned people <b>find and gather around</b>, voluntarily. Supplying a <b>missing, trusted
@@ -227,16 +227,23 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
     <p>Everything here measures the <em>conduct of institutions and power</em> &mdash; never individuals.
       No surveillance, no predictive policing, no targeting. An instrument built to defend open societies
       must never become one that could serve their enemies. And because a covenant alone is non-binding on
-      open licences, it is backed by an <b>enforced threat model</b>: a written gate decides what may be
-      computed and published &mdash; protection lives in the design, not just the promise.</p>
+      open licences, it is backed by a <b>threat model</b> with an enforced part: a build gate scans every published data
+      file and fails on columns or labels below country level, so protection lives in the design, not just
+      the promise. Its per-release checklist, including a red-team of the published forecasts, is still
+      open (see <a href="https://github.com/LX8/pharos/blob/main/STATUS.md">STATUS.md</a>).</p>
 
     <h2 id="open"><span class="num" aria-hidden="true">07</span>Open by design</h2>
-    <p>Multi-licensed and reproducible: prose under CC&nbsp;BY-SA&nbsp;4.0, code under GPL-3.0, derived
+    <p>Multi-licensed and reproducible: prose under CC&nbsp;BY-SA&nbsp;4.0, code under GPL-3.0-or-later, derived
       data under CC0. The whole project runs as <b>one stdlib-only command</b> &mdash; <code>./pharos</code>
       browses the graded entries, prints the indicators and the forecast, and re-runs the audits &mdash;
       <b>offline, no install, no network</b>. Everything recomputes from pinned data and self-audits
       before every change. Fork it, check it, build on it, prove it wrong. The strongest contribution is
       meeting a claim&rsquo;s falsification trigger with evidence.</p>
+    <p>Everything lives in one public repository, <a href="https://github.com/LX8/pharos">github.com/LX8/pharos</a>.
+      Clone it and run <code>make verify-offline</code> to recompute the indicators and the forecast
+      and re-run every audit, or <code>./pharos serve</code> to explore the evidence in a local
+      browser app. If the freshness check fails, a ledger entry is overdue for review &mdash; that alarm
+      is by design.</p>
 
     <h2 id="sources"><span class="num" aria-hidden="true">08</span>Sources &amp; further reading</h2>
     <p>The primary sources behind this page &mdash; every one verified against the published record before
@@ -245,11 +252,11 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
       <li>World Bank &mdash; <a href="https://www.worldbank.org/en/publication/worldwide-governance-indicators" rel="noopener">Worldwide Governance Indicators</a> (the six dimensions, with published confidence intervals).</li>
       <li>V-Dem &mdash; freedom-of-expression index, and Freedom House &mdash; civil liberties, both via <a href="https://ourworldindata.org" rel="noopener">Our World in Data</a> (the triangulation instruments).</li>
       <li>Hegre, H. et&nbsp;al. (2019). <a href="https://journals.sagepub.com/doi/full/10.1177/0022343319823860" rel="noopener">ViEWS: a political violence early-warning system</a>. <em>Journal of Peace Research</em>.</li>
-      <li>Hegre, H. et&nbsp;al. (2024). <a href="https://arxiv.org/abs/2407.11045" rel="noopener">The 2023/24 VIEWS Prediction Challenge</a> &mdash; where most models are beaten by a naive baseline under fair scoring (why our forecast scores itself the way it does).</li>
+      <li>Hegre, H. et&nbsp;al. (2024). <a href="https://arxiv.org/abs/2407.11045" rel="noopener">The 2023/24 VIEWS Prediction Challenge</a> &mdash; forecasts scored as full distributions by CRPS; whether models beat a no-change baseline is metric- and task-dependent (ledger entry SAA-040), which is why our forecast is scored against that baseline.</li>
       <li>Gneiting, T. &amp; Raftery, A. (2007). Strictly proper scoring rules, prediction, and estimation. <em>JASA</em> (the CRPS our forecast is scored by).</li>
       <li>Paxton, R. O. (2004). <em>The Anatomy of Fascism</em>. Knopf (the behavioral definition this project uses).</li>
       <li>Bermeo, N. (2016). On Democratic Backsliding. <em>Journal of Democracy</em> (erosion as gradual executive aggrandizement, not coups).</li>
-      <li>Granovetter, M. (1978) <em>AJS</em>; Watts, D. J. (2002) <a href="https://www.pnas.org/doi/10.1073/pnas.082090499" rel="noopener"><em>PNAS</em></a>; Centola, D. &amp; Macy, M. (2007) <a href="https://www.journals.uchicago.edu/doi/10.1086/521848" rel="noopener"><em>AJS</em></a>; Centola, D. et&nbsp;al. (2018) <a href="https://www.science.org/doi/10.1126/science.aas8827" rel="noopener"><em>Science</em></a>; Deffuant, G. et&nbsp;al. (2000) <em>Adv. Complex Syst.</em>; Epstein, J. (2002) <em>PNAS</em> &mdash; the published results the mechanism simulators reproduce.</li>
+      <li>Granovetter, M. (1978) <em>AJS</em>; Watts, D. J. (2002) <a href="https://www.pnas.org/doi/10.1073/pnas.082090499" rel="noopener"><em>PNAS</em></a>; Centola, D. &amp; Macy, M. (2007) <a href="https://www.journals.uchicago.edu/doi/10.1086/521848" rel="noopener"><em>AJS</em></a>; Xie, J. et&nbsp;al. (2011) <em>Phys. Rev. E</em>; Johnson &amp; MacKay (2015) <em>Evolution &amp; Human Behavior</em>; Deffuant, G. et&nbsp;al. (2000) <em>Adv. Complex Syst.</em>; Fortunato (2004) <em>Int. J. Mod. Phys. C</em>; Epstein, J. (2002) <em>PNAS</em> &mdash; the published results the mechanism simulators reproduce. Centola, D. et&nbsp;al. (2018) <a href="https://www.science.org/doi/10.1126/science.aas8827" rel="noopener"><em>Science</em></a> is the experimental contrast (a tipping point of about 25%, measured in people).</li>
       <li>Wineburg, S. &amp; McGrew, S. (2019). Lateral Reading and the Nature of Expertise. <em>Teachers College Record</em> (the actionable epistemic defense).</li>
     </ul>
 
@@ -258,12 +265,11 @@ Working draft of the project's public landing page. NOT deployed — see site/RE
   <footer class="wrap">
     <p class="lic">A project for the public, for the good of humanity and the environment &middot;
       by <b>The Pharos contributors</b><br>
-      Licensed <code>CC&nbsp;BY-SA&nbsp;4.0</code> (prose) &middot; <code>GPL-3.0</code> (code) &middot;
+      Licensed <code>CC&nbsp;BY-SA&nbsp;4.0</code> (prose) &middot; <code>GPL-3.0-or-later</code> (code) &middot;
       <code>CC0</code> (data). <em>Cite only what is measured.</em><br>
       <b>v0.7.0</b> &middot; two pillars &mdash; a 41-entry evidence ledger and a forecast &mdash; both
       machine-checked and reproducible from open data.</p>
-    <p class="small">&ldquo;Aty Guasu&rdquo; is the Guarani name for the great assembly of the peoples.
-      Working name &mdash; to be confirmed or changed.</p>
+    <p class="small">&ldquo;Pharos&rdquo; is the lighthouse of Alexandria: a beacon that warns without targeting.</p>
   </footer>
 </body>
 </html>

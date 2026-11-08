@@ -17,7 +17,7 @@ it is the same honesty, translated.
 Most of the movement in governance scores over 2014–2024 is **statistical noise (88%
 of what we measured)** — but where a real signal exists, decline outpaces improvement, it is
 concentrated in **citizens' voice** (free expression, free media, participation), and on
-26 countries three independent instruments agree it is happening.
+26 countries all three instruments (overlapping, not independent) agree it is happening.
 
 ## The ledger, plainly
 
@@ -37,7 +37,7 @@ The imbalance is not spread evenly: in *Voice & Accountability* alone it is
 terms: where governance is measurably changing, the space for citizens to speak, publish,
 and participate is the part most often shrinking.
 
-## Where independent instruments agree
+## Where the instruments agree
 
 One index can be wrong; that is why we use three (World Bank, V-Dem, Freedom House) and
 publish their **disagreements instead of averaging them away**. Over 2014–2024: in
@@ -62,7 +62,7 @@ plain-language version of why is in
 
 - **A journalist** asking *"is this country's reported decline real, or noise?"* — check the
   [indicator table](indicators/wgi-governance.md) for the significance flag, and the
-  [divergence table](indicators/voice-divergence.md) for whether independent instruments
+  [divergence table](indicators/voice-divergence.md) for whether the three instruments
   agree, before the story ships.
 - **A watchdog or civil-society monitor** deciding *where scarce attention goes* — the
   26-country full-concurrence list above is the highest-confidence

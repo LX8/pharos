@@ -15,8 +15,8 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## The Watch List — 26 countries
 
-The one object this report exists to carry: the countries where **all three independent
-instruments** (World Bank, V-Dem, Freedom House) **concur, each at its own significance
+The one object this report exists to carry: the countries where **all three
+instruments** (World Bank, V-Dem, Freedom House — overlapping, not independent) **concur, each at its own significance
 bar, that civic voice declined** over 2014–2024. Not a score, not a blend — a concurrence.
 
 > Afghanistan, Belarus, Benin, Burkina Faso, Burundi, Comoros, El Salvador, Georgia, Haiti, Hong Kong SAR, China, Hungary, Mali, Mexico, Mozambique, Myanmar, Nicaragua, Niger, Philippines, Russian Federation, Serbia, Tajikistan, Tanzania, Tunisia, Turkiye, Venezuela, RB, Yemen, Rep..

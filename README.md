@@ -73,8 +73,9 @@ an adversarial deep-research run: 29 sources → 137 claims → 25 verified →
   ([`docs/VERIFYING.md`](docs/VERIFYING.md)); and
 - **`pharos`**, one stdlib-only command (below) that ties it all together.
 
-Everything is stdlib-only and reproducible offline. The static site is not
-deployed; the local observatory (`./pharos serve`) runs entirely on your computer.
+Everything is stdlib-only and reproducible offline. The landing page is live at
+<https://lx8.github.io/pharos/>; the interactive observatory (`./pharos serve`) runs entirely on your
+computer.
 
 **Headline:** science contains authoritarianism along two axes — as a
 *method* (open, falsifiability-first knowledge attacks the epistemic
@@ -200,7 +201,7 @@ that subordinates truth to power is knowledge that anyone can audit.
 | **Here for the record** | **[`docs/CHRONICLE.md`](docs/CHRONICLE.md)** (how it was built) · **[`STATUS.md`](STATUS.md)** (state + honest backlog) · **[`docs/verifications/`](docs/verifications/)** (the method turned on the plan itself, and on Graham Hancock's claims) |
 | **Here for the flagship** | **[`docs/WATCH_REPORT.md`](docs/WATCH_REPORT.md)** — the report-edition prototype carrying **the Watch List** (countries where all three instruments concur on voice decline) as its single object; generated from committed data (`make watch-report`) *(prototype — the public name and fixed cadence are the maintainers' open decisions)* |
 | **Here for what's next** | **[`docs/IMPACT.md`](docs/IMPACT.md)** — the evidence-backed impact strategy: 18 adversarially-verified claims about how evidence tools achieve real use, ranked levers (each tagged buildable-now vs maintainer-gated), uptake metrics defined *before* going public, and the red lines an impact push must never cross. Every buildable-now lever is shipped; the rest is founder-gated |
-| **Here for the public face** | **[`site/`](site/)** — the static landing page (built, **not deployed**; GitHub Pages is off — deploying it is a separate decision from publishing the repository) |
+| **Here for the public face** | **[`site/`](site/)** — the static landing page (live at <https://lx8.github.io/pharos/>) |
 | **Here for the findings** | **[`REPORT.md`](REPORT.md)** — the cited synthesis, 7 findings graded ROBUST / CONTESTED / REFUTED / OPEN |
 | **Here for the proposed tool** | **Pharos** — [`REPORT.md`](REPORT.md) Part IV: an open, falsifiable backsliding early-warning observatory + evidence ledger. The forecasting pillar now has an honest v0: **[`docs/forecast/pharos-forecast-v0.md`](docs/forecast/pharos-forecast-v0.md)** — a calibration layer (not a hero call) that CRPS/Brier-scores backsliding forecasts against a no-change baseline, and reports plainly that v0 does *not* yet beat it |
 | **A skeptic / reviewer** | The *Risks & Limits* section of `REPORT.md` — dual-use, surveillance abuse, techno-solutionism, and what science **cannot** do |

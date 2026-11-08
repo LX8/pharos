@@ -89,18 +89,6 @@ h2 .num {
 .muted { color: var(--ink-soft); }
 .small { font-size: .86rem; }
 
-/* ---- draft banner ---------------------------------------------------- */
-.banner {
-  background: linear-gradient(180deg, #14101a, #0f0c14);
-  color: var(--ink-soft);
-  text-align: center;
-  font-size: .8rem;
-  letter-spacing: .02em;
-  padding: 9px 16px;
-  border-bottom: 1px solid var(--line);
-}
-.banner strong { color: var(--beam); font-weight: 600; }
-
 /* ---- hero ------------------------------------------------------------ */
 header.hero {
   position: relative;
@@ -154,7 +142,6 @@ header.hero {
   color: var(--beam); margin: 0 0 22px; font-weight: 600;
 }
 .eyebrow .mark { flex: none; color: var(--beam); opacity: .9; }
-.eyebrow .wn { color: var(--ink-faint); text-transform: none; letter-spacing: .01em; font-weight: 500; }
 h1 {
   font-family: var(--serif);
   font-size: clamp(3rem, 11vw, 5.4rem);
@@ -315,6 +302,7 @@ main code {
   padding: 2px 7px; border-radius: 5px; font-size: .85em;
   border: 1px solid var(--line);
 }
+main a code { color: inherit; }
 
 /* ---- footer ---------------------------------------------------------- */
 footer {

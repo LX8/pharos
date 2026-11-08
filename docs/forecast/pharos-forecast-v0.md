@@ -22,7 +22,8 @@ question over a whole portfolio:
 ## Why this shape (the R6 / C5 fix)
 
 A legible "they said X would fall and it didn't" clip can burn the whole trust asset, and
-in the VIEWS prediction competitions *most models are beaten by a no-change baseline*. So
+in the VIEWS prediction competitions beating a no-change baseline is metric- and task-dependent
+(ledger entry SAA-040). So
 the only thing this ships is a **portfolio score against that baseline**, with the success
 bar pre-committed:
 

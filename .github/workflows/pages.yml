@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2026 The Pharos contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Publishes the static landing page to GitHub Pages: https://lx8.github.io/pharos/
+#
+# The `gate` job first re-runs the page's own checks — the figures pinned by the counts audit,
+# the overstatement guard and the site tests — and `deploy` runs only if they pass. (The
+# date-dependent ledger freshness check is left to the verify workflow, so a ledger entry that
+# falls due for review cannot block a fix to the page.)
+#
+# Only site/index.html and site/style.css are published. The interactive observatory in
+# site/app/ needs the local server (`./pharos serve`) for its research and verification API,
+# so it stays on your own computer and is never deployed.
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths: ['site/index.html', 'site/style.css', '.github/workflows/pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    name: page checks (pinned figures, overstatement, site tests)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: re-run the page's own checks
+        run: |
+          python3 src/audit_counts.py
+          python3 src/audit_overstatement.py
+          python3 -m unittest discover -s tests -p 'test_site.py' -v
+
+  deploy:
+    name: deploy the landing page
+    needs: gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: stage only the landing page
+        run: |
+          mkdir -p _site
+          cp site/index.html site/style.css _site/
+          ls -la _site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

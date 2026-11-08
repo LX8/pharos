@@ -113,9 +113,8 @@ a "state of the watch" — published on a fixed annual (or semiannual) date, com
 ledger + indicators into one carryable object, with the rich machinery underneath. The
 Doomsday Clock, Freedom in the World, and V-Dem's March report all run on this pattern.
 **[now]:** prototype the artifact from committed data (the falsification watch + tally +
-divergence counts are already computed and drift-gated). **[founder]:** the name (the
-"Aty Guasu" working-name decision is a hard dependency — an unsettled name is a tax on
-every citation, claim 6 seeds), the cadence commitment, and the editorial voice.
+divergence counts are already computed and drift-gated). **[founder]:** the name (decided 2026-11-08: **Pharos** — an unsettled
+name was a tax on every citation, claim 6 seeds), the cadence commitment, and the editorial voice.
 
 ### L3 — A legible trust-signals surface [now]
 Claim 12 (SUPPORTED) says trust follows *signaled* norms, not merely practiced ones. The
@@ -217,7 +216,7 @@ load-bearing, restated as standing refusals:
 
 ## 6. Open questions for the founder
 
-1. **The name.** "Aty Guasu" or another — L2 and L5's citability both block on it.
+1. **The name.** Decided 2026-11-08: **Pharos** (the landing page is live under that name).
 2. **The cadence.** Annual or semiannual flagship? Which month becomes the fixed date?
 3. **The gate.** The three long-standing founder-only steps (open publication, second
    grader, article refresh) are now also the top of the impact-lever ranking — the

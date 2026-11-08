@@ -63,9 +63,10 @@ the ladder, the seven audits, the offline determinism guarantee, and the adversa
   8 QUALIFIED / 0 WEAK / 0 BREAKS · 0 FATAL / 2 SERIOUS / 4 MANAGEABLE; verdict: directionally sound,
   headline oversold)** → [`docs/verifications/plan-for-peace.md`](docs/verifications/plan-for-peace.md).
 - **Record** — `docs/CHRONICLE.md`, this file.
-- **Website** — `site/` (static landing page, dependency-free) — **built, NOT deployed** (GitHub
-  Pages OFF; deploying it is a separate decision from publishing the repository). Working name "Aty Guasu" (to be confirmed).
-  Refreshed to **v0.3.0**: both pillars (evidence ledger + forecast), the forecast-honesty section
+- **Website** — `site/` (static landing page, dependency-free) — **live** at
+  <https://lx8.github.io/pharos/> since 2026-11-08 (GitHub Pages, deployed by `.github/workflows/pages.yml`),
+  named **Pharos**.
+  Kept current through **v0.7.0**: both pillars (evidence ledger + forecast), the forecast-honesty section
   ("we don't beat the baseline yet — and we say so"), the triangulation, the enforced threat model,
   and the self-auditing/reproducible framing.
 - **Staleness gate** *(plan-for-peace Tier-0 ①)* — `src/ledger_staleness.py` + `make staleness`
@@ -93,8 +94,8 @@ the ladder, the seven audits, the offline determinism guarantee, and the adversa
   `verify`): triangulates WGI Voice & Accountability × V-Dem freedom-of-expression × Freedom House
   civil-liberties and **publishes divergence, not a single score** — **45 CONCUR-DECLINE** (26 at full
   3/3: HUN RUS BLR TUR VEN MMR HKG NIC … ), **5 CONFLICT** (named dissenter), the rest MIXED-WEAK /
-  ALL-FLAT. Independently corroborates "the erosion is concentrated in voice" (~5.6:1 decline:improve
-  across instruments) while making a gamed single input surface as CONFLICT, not a false green.
+  ALL-FLAT. Concurs with "the erosion is concentrated in voice" (~5.6:1 decline:improve
+  across instruments; they overlap, so this is concurrence, not independent corroboration) while making a gamed single input surface as CONFLICT, not a false green.
   16 deterministic tests. **→ All four Tier-0 launch gates (①②③④) are now built.**
 - **Reliability & efficiency hardening** — **free local CI** via git hooks (`make hooks`: pre-commit →
   `make dashboard`, pre-push → `make verify-offline`) — no cloud, no billing (the workflow

@@ -12,6 +12,26 @@ their tags and commit ids refer to the non-public pre-publication history.
 
 ## [Unreleased]
 
+### Added — the landing page is live (2026-11-08)
+- `site/index.html` is published with GitHub Pages at <https://lx8.github.io/pharos/> by the new
+  `.github/workflows/pages.yml`, which deploys only the landing page (`index.html` + `style.css`);
+  the interactive observatory needs the local server and stays local. The page now carries the
+  project's name, **Pharos** (it had the working name "Aty Guasu"), drops its working-draft banner,
+  links to the repository, and points `canonical` / `og:url` at the live address. The workflow first
+  re-runs the page's own checks (pinned figures, overstatement guard, site tests) and deploys only if
+  they pass.
+
+### Fixed — public wording aligned with the project's own records (2026-11-08)
+- An independent review before the launch found page text that claimed more than the repository
+  supports. The three instruments are now described as overlapping, not independent (as in
+  `docs/indicators/voice-divergence.md`), on the page and in the generated brief and watch report;
+  the VIEWS Challenge gloss and `docs/forecast/pharos-forecast-v0.md` follow ledger entry SAA-040;
+  "every public number" became "every headline figure", "every formula" became "every load-bearing
+  formula (5 of 6 bit-exact)"; the threat-model text says which part is enforced and that its
+  release checklist is open; the simulator citations list the results actually reproduced (Xie et
+  al. 2011, Johnson & MacKay 2015, Fortunato 2004), with Centola et al. 2018 as the experimental
+  contrast; the code licence reads GPL-3.0-or-later; the ledger card shows the OPEN grade.
+
 ## [0.7.0] — 2026-11-08 — first public release: the local observatory, the forward score, collective credit
 
 ### Published — first public release (2026-11-08)
