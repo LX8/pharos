@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Local gate for the Pharos quantitative pillar. Stdlib only — no pip install.
-.PHONY: help test indicators divergence forecast sims validate staleness overstatement counts threat-model index brief watch-report bias-pack pharos drift dashboard hooks snapshot verify-offline verify score cycle
+.PHONY: help test indicators divergence forecast sims validate staleness overstatement counts threat-model index brief watch-report pages bias-pack pharos drift dashboard hooks snapshot verify-offline verify score cycle
 
 .DEFAULT_GOAL := help
 
@@ -58,6 +58,8 @@ verify-offline: ## deterministic gate, NO network — recompute from pinned snap
 	@# could regenerate data/derived and commit stale BRIEF/WATCH_REPORT alongside it.
 	python3 src/brief.py
 	python3 src/watch_report.py
+	@# the landing pages (all four languages) must equal a fresh build from template + strings + data
+	python3 src/build_site.py
 	@echo "verify-offline: ok"
 
 sims:        ## run the Tier-1 validated mechanism simulators (demos)
@@ -92,6 +94,9 @@ brief:       ## (re)generate the plain-language brief (docs/BRIEF.md) from the c
 
 watch-report: ## (re)generate the flagship watch-report prototype (docs/WATCH_REPORT.md)
 	python3 src/watch_report.py --write
+
+pages:       ## (re)generate the landing page in all four languages (site/index.html + site/{es,de,pt}/index.html) from site/template.html + site/i18n/
+	python3 src/build_site.py --write
 
 bias-pack:   ## generate the blind coding pack for the bias self-audit into build/bias-audit/ (founder-gated run)
 	python3 src/bias_audit.py --pack build/bias-audit

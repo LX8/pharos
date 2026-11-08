@@ -12,7 +12,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 The gate had two conditions: (a) planning *and* calculating done, computed, uncertainty-quantified
 and verified; (b) an explicit go. The go was given and the repository was published on 2026-11-08
 as a verified snapshot (see [`SNAPSHOT.md`](SNAPSHOT.md)); the software gates pass
-(`make verify-offline`, 293 tests; `make dashboard`, 7/7).
+(`make verify-offline`, 306 tests; `make dashboard`, 7/7).
 
 > **Deviation from the pre-registered plan (recorded 2026-11-08).** The repository was published
 > before three commitments this project set for publication were met. All three remain open:
@@ -27,7 +27,7 @@ as a verified snapshot (see [`SNAPSHOT.md`](SNAPSHOT.md)); the software gates pa
 
 The ethical-use covenant in [`NOTICE`](NOTICE) §7 applies.
 
-## ✅ Done (verified, `make verify-offline` green — 293 tests)
+## ✅ Done (verified, `make verify-offline` green — 306 tests)
 
 - **Pharos local observatory (2026-09-23):** `./pharos serve` opens the study-grounded
   browser app: searchable evidence, historical indicator disagreements, forecast and

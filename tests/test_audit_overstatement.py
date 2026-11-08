@@ -81,13 +81,50 @@ class TestCorpus(unittest.TestCase):
             with open(p, encoding="utf-8") as f:
                 raw = f.read()
             text = a._strip_html(raw) if p.endswith(".html") else raw
-            serious += [x for x in a.scan_text(text, os.path.basename(p)) if x[0] == "SERIOUS"]
+            serious += [x for x in a.scan_text(text, os.path.relpath(p, REPO), a._lang_of(p))
+                        if x[0] == "SERIOUS"]
         self.assertEqual(serious, [], f"overstatement in graded prose: {serious}")
 
     def test_site_is_in_scope(self):
         # guard against a future regression that silently drops the site from the audit
         scoped = [os.path.basename(p) for p in a._scope(REPO) if "site" in p]
         self.assertTrue(scoped, "site/index.html must be in the overstatement audit scope")
+
+    def test_every_translated_page_is_scanned_in_its_language(self):
+        # a language added to the site without its own patterns would be scanned in English only
+        import build_site
+        scoped = {os.path.relpath(p, REPO): a._lang_of(p) for p in a._scope(REPO)}
+        for code, *_rest, rel in build_site.LANGS:
+            self.assertEqual(scoped.get(os.path.join("site", rel)), code,
+                             f"site/{rel} must be in scope and scanned as '{code}'")
+
+
+class TestTranslationPatterns(unittest.TestCase):
+    """The same honesty discipline in Spanish, German and Portuguese."""
+
+    def sev(self, text, lang):
+        return [f[0] for f in a.scan_text(text, "x.html", lang)]
+
+    def test_overclaims_flagged_in_each_language(self):
+        for lang, text in (("es", "El efecto es irrefutable."),
+                           ("es", "Está demostrado más allá de toda duda."),
+                           ("de", "Das ist zweifelsfrei bewiesen."),
+                           ("de", "Der Befund ist mathematisch bewiesen."),
+                           ("pt", "Isso foi matematicamente comprovado."),
+                           ("pt", "Está provado sem sombra de dúvida.")):
+            self.assertIn("SERIOUS", self.sev(text, lang), f"{lang}: {text}")
+
+    def test_scoped_impossibility_is_exempt_in_each_language(self):
+        self.assertEqual(self.sev("Esto es imposible sin una coalición.", "es"), [])
+        self.assertEqual(self.sev("Das ist unmöglich ohne eine Koalition.", "de"), [])
+        self.assertEqual(self.sev("Isso é impossível sem uma coalizão.", "pt"), [])
+        self.assertIn("SERIOUS", self.sev("Das ist unmöglich.", "de"))
+
+    def test_patterns_apply_to_their_own_language_only(self):
+        # Spanish/Portuguese "definitivamente" is not scanned as English, and vice versa
+        self.assertEqual(self.sev("Lo dijo definitivamente.", "en"), [])
+        self.assertIn("SERIOUS", self.sev("Lo dijo definitivamente.", "es"))
+        self.assertEqual(self.sev("Lo dijo obviamente.", "es"), ["MEDIUM"])
 
 
 if __name__ == "__main__":

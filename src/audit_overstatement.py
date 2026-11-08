@@ -6,7 +6,8 @@
 An honesty-first project's worst regression is claim-creep: a future edit slips an
 absolute ("definitively proven", "beyond doubt", "mathematically proves") into a
 graded claim that the evidence cannot carry. This scans the load-bearing prose —
-the ledger entries, the article, and REPORT.md — for that language.
+the ledger entries, the article, REPORT.md and the public landing page in all four of its
+languages (English, Spanish, German, Portuguese) — for that language.
 
 It is deliberately calibrated to the *current, carefully-hedged* corpus: the SERIOUS
 patterns are unconditional-certainty phrases that appear **nowhere** today (so the
@@ -44,6 +45,62 @@ MEDIUM = [
 # A conditional within this many chars after "is/are impossible" exempts it.
 _CONDITIONAL = re.compile(r"\b(?:under|given|if|unless|without|absent|barring|outside|when|assuming)\b", re.I)
 
+# The public landing page is published in four languages (src/build_site.py builds site/es/,
+# site/de/ and site/pt/ from one template). The English patterns above run on every page; these
+# add each language's own unconditional-certainty phrases, applied to the page in that language.
+# Calibrated like the English list: zero hits on today's pages, so the gate bites only on a new
+# overclaim slipped into a translation.
+SERIOUS_I18N = {
+    "es": [
+        (re.compile(r"\bdefinitivamente\b", re.I), "absolute-certainty adverb"),
+        (re.compile(r"\bconcluyentemente\b", re.I), "absolute-certainty adverb"),
+        (re.compile(r"\birrefutables?\b", re.I), "claims irrefutability"),
+        (re.compile(r"\bincontrovertibles?\b", re.I), "claims incontrovertibility"),
+        (re.compile(r"\bm[áa]s all[áa] de (?:toda |cualquier )?duda\b", re.I), "absolute-certainty phrase"),
+        (re.compile(r"\bsin (?:ninguna|lugar a) dudas?\b", re.I), "absolute-certainty phrase"),
+        (re.compile(r"\b100\s*%\s*(?:segur|ciert|demostrad|probad)[oa]s?\b", re.I), "false precision of certainty"),
+        (re.compile(r"\bmatem[áa]ticamente\s+(?:demostrad|probad|demuestra|prueba)\w*", re.I),
+         "claims mathematical proof of an empirical matter"),
+        (re.compile(r"\b(?:es|son)\s+imposibles?\b", re.I), "unconditional impossibility", "needs_conditional"),
+    ],
+    "de": [
+        (re.compile(r"\bdefinitiv\b", re.I), "absolute-certainty adverb"),
+        (re.compile(r"\bendgültig\s+(?:bewiesen|belegt|nachgewiesen|geklärt)\b", re.I), "absolute-certainty phrase"),
+        (re.compile(r"\bzweifelsfrei\w*", re.I), "absolute-certainty adverb"),
+        (re.compile(r"\bohne (?:jeden|jeglichen|den geringsten) Zweifel\b", re.I), "absolute-certainty phrase"),
+        (re.compile(r"\bunwiderlegba\w*", re.I), "claims irrefutability"),
+        (re.compile(r"\bunumstößlich\w*", re.I), "claims incontrovertibility"),
+        (re.compile(r"\b100\s*%\s*(?:sicher|bewiesen|belegt)\b", re.I), "false precision of certainty"),
+        (re.compile(r"\bmathematisch\s+(?:bewiesen|beweisbar|belegt|nachgewiesen)\b", re.I),
+         "claims mathematical proof of an empirical matter"),
+        (re.compile(r"\b(?:ist|sind)\s+unmöglich\b", re.I), "unconditional impossibility", "needs_conditional"),
+    ],
+    "pt": [
+        (re.compile(r"\bdefinitivamente\b", re.I), "absolute-certainty adverb"),
+        (re.compile(r"\bconclusivamente\b", re.I), "absolute-certainty adverb"),
+        (re.compile(r"\birrefut[áa]ve(?:l|is)\b", re.I), "claims irrefutability"),
+        (re.compile(r"\b(?:incontrovers[oa]s?|incontest[áa]ve(?:l|is))\b", re.I), "claims incontrovertibility"),
+        (re.compile(r"\bal[ée]m de (?:qualquer|toda) d[úu]vida\b", re.I), "absolute-certainty phrase"),
+        (re.compile(r"\bsem (?:sombra de|nenhuma) d[úu]vida\b", re.I), "absolute-certainty phrase"),
+        (re.compile(r"\b100\s*%\s*(?:cert|segur|provad|comprovad)[oa]s?\b", re.I), "false precision of certainty"),
+        (re.compile(r"\bmatematicamente\s+(?:provad|comprovad|demonstrad|prova|comprova|demonstra)\w*", re.I),
+         "claims mathematical proof of an empirical matter"),
+        (re.compile(r"\b(?:é|são)\s+imposs[íi]ve(?:l|is)\b", re.I), "unconditional impossibility", "needs_conditional"),
+    ],
+}
+MEDIUM_I18N = {
+    "es": [(re.compile(r"\bobviamente\b", re.I), "rhetorical certainty"),
+           (re.compile(r"\b(?:innegabl|indiscutibl)\w*", re.I), "rhetorical certainty")],
+    "de": [(re.compile(r"\boffensichtlich\w*", re.I), "rhetorical certainty"),
+           (re.compile(r"\b(?:unbestreitbar|unleugbar)\w*", re.I), "rhetorical certainty")],
+    "pt": [(re.compile(r"\bobviamente\b", re.I), "rhetorical certainty"),
+           (re.compile(r"\b(?:ineg[áa]ve|indiscut[íi]ve)\w*", re.I), "rhetorical certainty")],
+}
+# The same scoped-claim exemption ("impossible WITHOUT a coalition"), in the page's language.
+_CONDITIONAL_I18N = re.compile(
+    r"\b(?:sin|si|bajo|salvo|cuando|ohne|wenn|falls|unter|au(?:ß|ss)er|sofern|solange"
+    r"|sem|se|sob|caso|quando)\b", re.I)
+
 
 def _in_quotes(line, idx):
     """True if the char at idx sits inside a double-quoted span (odd quotes before it)."""
@@ -67,11 +124,14 @@ def _is_exempt(line, idx):
     return _in_quotes(line, idx)
 
 
-def scan_text(text, filename):
+def scan_text(text, filename, lang="en"):
     """Pure. Return [(severity, filename, lineno, phrase, why)] for one document.
 
-    YAML frontmatter (the first --- … --- block) is skipped entirely.
+    YAML frontmatter (the first --- … --- block) is skipped entirely. `lang` adds that
+    language's patterns (SERIOUS_I18N / MEDIUM_I18N) to the English ones.
     """
+    serious = SERIOUS + SERIOUS_I18N.get(lang, [])
+    medium = MEDIUM + MEDIUM_I18N.get(lang, [])
     findings = []
     in_front = False
     seen_front = False
@@ -83,16 +143,17 @@ def scan_text(text, filename):
             continue
         if in_front:
             continue
-        for entry in SERIOUS:
+        for entry in serious:
             rx, why = entry[0], entry[1]
             for m in rx.finditer(line):
                 if _is_exempt(line, m.start()):
                     continue
-                if len(entry) == 3 and entry[2] == "needs_conditional" and \
-                        _CONDITIONAL.search(line[m.end():m.end() + 40]):
+                tail = line[m.end():m.end() + 40]
+                if len(entry) == 3 and entry[2] == "needs_conditional" and (
+                        _CONDITIONAL.search(tail) or (lang != "en" and _CONDITIONAL_I18N.search(tail))):
                     continue   # "impossible under X" is a scoped, legitimate claim
                 findings.append(("SERIOUS", filename, n, m.group(0), why))
-        for rx, why in MEDIUM:
+        for rx, why in medium:
             for m in rx.finditer(line):
                 if _is_exempt(line, m.start()):
                     continue
@@ -125,7 +186,18 @@ def _scope(repo):
     sit = os.path.join(repo, "site")
     if os.path.isdir(sit):
         out += [os.path.join(sit, f) for f in sorted(os.listdir(sit)) if f.endswith((".html", ".md"))]
+        # the translated landing pages (src/build_site.py), one directory down, scanned in their language
+        out += [os.path.join(sit, code, "index.html") for code in sorted(SERIOUS_I18N)
+                if os.path.exists(os.path.join(sit, code, "index.html"))]
     return out
+
+
+def _lang_of(path):
+    """The language a scoped file is written in: a translated page lives at site/<lang>/index.html."""
+    parts = os.path.normpath(path).split(os.sep)
+    if len(parts) >= 3 and parts[-3] == "site" and parts[-2] in SERIOUS_I18N:
+        return parts[-2]
+    return "en"
 
 
 def _strip_html(text):
@@ -161,7 +233,7 @@ def main(argv=None):
         with open(path, encoding="utf-8") as f:
             raw = f.read()
         text = _strip_html(raw) if path.endswith(".html") else raw
-        findings += scan_text(text, os.path.relpath(path, args.repo))
+        findings += scan_text(text, os.path.relpath(path, args.repo), _lang_of(path))
 
     serious = [f for f in findings if f[0] == "SERIOUS"]
     medium = [f for f in findings if f[0] == "MEDIUM"]

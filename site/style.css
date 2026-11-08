@@ -303,6 +303,8 @@ main code {
   border: 1px solid var(--line);
 }
 main a code { color: inherit; }
+/* commands and URLs in chips must wrap on a phone rather than push the page sideways */
+main code { overflow-wrap: anywhere; }
 
 /* ---- footer ---------------------------------------------------------- */
 footer {
@@ -383,4 +385,56 @@ main > p, details.fold > p, dl.grades dd, ul.refs li { max-width: 66ch; }
 @media (prefers-reduced-motion: reduce) {
   .btn:hover { transform: none; }
   .hero .lamp { animation: none; }
+}
+
+/* ---- language switcher ------------------------------------------------ */
+/* Four generated pages (en at the root, es/de/pt one level down) share this stylesheet. The
+   switcher overlays the top of the hero; plain links, no script, each naming its language in
+   that language, with the current page marked by aria-current (not by colour alone). */
+.lang { position: absolute; top: 0; left: 0; right: 0; z-index: 25; }
+.lang-inner {
+  max-width: var(--max); margin: 0 auto; padding: 14px 24px 0;
+  display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px;
+}
+.lang a {
+  font-size: .8rem; color: var(--ink-soft); padding: .3em .65em; border-radius: 6px;
+  border: 1px solid transparent; border-bottom: 1px solid transparent;
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+}
+.lang a:hover { color: #ffd178; border-color: var(--line-2); }
+.lang a[aria-current="page"] { color: var(--beam); border-color: var(--line-2); font-weight: 600; }
+/* on a phone the switcher spans the hero's top edge: drop the lamp's glow below it */
+@media (max-width: 600px) { .hero .lamp { top: 66px; } }
+
+/* ---- plain-language and how-to sections ------------------------------- */
+h3.sub { font-size: 1.05rem; color: #fff; margin: 1.7em 0 .55em; }
+ul.plain { margin: 0 0 1.2em; padding-left: 1.15em; }
+ul.plain li { margin: 0 0 .6em; color: var(--ink-soft); max-width: 66ch; }
+ul.plain li b { color: var(--ink); }
+.paths { display: grid; gap: 14px; margin: 1.5em 0; }
+.path h3 { color: var(--beam); }
+.path p + p, .path p + ol, .path ol + p { margin-top: .75em; }
+ol.steps { margin: .75em 0 0; padding-left: 1.3em; color: var(--ink-soft); font-size: .93rem; }
+ol.steps li { margin: 0 0 .5em; padding-left: .2em; }
+ol.steps li::marker { color: var(--beam); font-weight: 600; }
+
+/* ---- download ---------------------------------------------------------- */
+/* The whole project is one small ZIP from GitHub: a one-click button in the hero and a panel at
+   the top of "Download and use", so nobody has to find GitHub's own Code menu. */
+.btn-dl { color: var(--beam); background: var(--beam-haze); border-color: var(--beam-deep); }
+.btn-dl:hover { color: #1a1206; background: #ffd178; border-color: var(--beam-deep); transform: translateY(-2px); }
+.dl-icon { flex: none; }
+.download {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px;
+  margin: 1.4em 0 1.6em; padding: 20px 22px;
+  background: linear-gradient(110deg, rgba(234,171,60,.10), var(--panel) 65%);
+  border: 1px solid var(--line-2); border-radius: 14px;
+}
+.download p { flex: 1 1 22em; margin: 0; color: var(--ink-soft); font-size: .93rem; }
+.btn-big { padding: .95em 1.35em; font-size: 1.02rem; }
+footer .links { margin-bottom: 1em; }
+footer .links a { margin-right: .2em; }
+@media (prefers-reduced-motion: reduce) {
+  .btn-dl:hover { transform: none; }
 }

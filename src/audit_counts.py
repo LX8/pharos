@@ -124,6 +124,16 @@ FIGURE_CHECKS = [
     ("site/index.html", r'seg-decline" style="width:([\d.]+)%', "bar_decline_pct1"),
     ("site/index.html", r'seg-improve" style="width:([\d.]+)%', "bar_improve_pct1"),
     ("site/index.html", r"<b>([\d,]+) pre-registered</b>", "n_forecasts"),
+    # the translated landing pages (src/build_site.py builds them from the same data): their
+    # language-neutral figures are pinned per page too, so a hand-edited translation is caught
+    *[(f"site/{lang}/index.html", pattern, key)
+      for lang in ("es", "de", "pt")
+      for pattern, key in ((r'class="bignum">(\d+)<span>%', "within_noise_pct"),
+                           (r'seg-noise"   style="width:([\d.]+)%', "bar_noise_pct1"),
+                           (r'seg-decline" style="width:([\d.]+)%', "bar_decline_pct1"),
+                           (r'seg-improve" style="width:([\d.]+)%', "bar_improve_pct1"),
+                           (r"\((?:[^()]*?) (\d+):\d+\)", "meaningful_declines"),
+                           (r"\((?:[^()]*?) \d+:(\d+)\)", "meaningful_improvements"))],
     # the detailed indicator + forecast docs (where the load-bearing claims live)
     ("docs/indicators/wgi-governance.md", r"Within measurement noise\*\* \| \*\*([\d,]+)\*\*", "within_noise"),
     ("docs/indicators/wgi-governance.md", r"Within measurement noise\*\* \| \*\*[\d,]+\*\* \| \*\*(\d+)%", "within_noise_pct"),
@@ -139,6 +149,9 @@ FIGURE_CHECKS = [
 SYMMETRIC_SURFACES = [
     "README.md",
     "site/index.html",
+    "site/es/index.html",
+    "site/de/index.html",
+    "site/pt/index.html",
     "docs/BRIEF.md",
     "docs/WATCH_REPORT.md",
     "docs/indicators/wgi-governance.md",

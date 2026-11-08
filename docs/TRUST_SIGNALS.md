@@ -53,7 +53,7 @@ single 2026-11-08 commit; earlier history is not public)
 - The recompute must match the committed outputs **byte-for-byte** or the gate fails —
   including line endings, pinned cross-platform via `.gitattributes`.
 
-**Check it:** `make verify-offline` — **293 offline tests** plus the full recompute; any
+**Check it:** `make verify-offline` — **306 offline tests** plus the full recompute; any
 drift between what the code produces and what the docs claim is a build failure.
 
 ## 3. Falsifiability — pre-registered, in one place

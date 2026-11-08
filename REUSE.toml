@@ -30,6 +30,8 @@ path = [
     ".zenodo.json",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
+    # the landing page's per-language strings (JSON cannot carry an inline header)
+    "site/i18n/**.json",
 ]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 The Pharos contributors"

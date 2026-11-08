@@ -1,22 +1,26 @@
 # SPDX-FileCopyrightText: 2026 The Pharos contributors
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-# Publishes the static landing page to GitHub Pages: https://lx8.github.io/pharos/
+# Publishes the static landing page to GitHub Pages: https://lx8.github.io/pharos/ (English),
+# with /es/, /de/ and /pt/ for the Spanish, German and Portuguese versions.
 #
-# The `gate` job first re-runs the page's own checks — the figures pinned by the counts audit,
-# the overstatement guard and the site tests — and `deploy` runs only if they pass. (The
-# date-dependent ledger freshness check is left to the verify workflow, so a ledger entry that
-# falls due for review cannot block a fix to the page.)
+# The `gate` job first re-runs the page's own checks — the committed pages must equal a fresh
+# build from site/template.html, site/i18n/ and the data (src/build_site.py, which also fails if a
+# translation's numbers, links or commands differ from the English page's), the figures pinned by
+# the counts audit, the overstatement guard (in all four languages) and the site tests — and
+# `deploy` runs only if they pass. (The date-dependent ledger freshness check is left to the verify
+# workflow, so a ledger entry that falls due for review cannot block a fix to the page.)
 #
-# Only site/index.html and site/style.css are published. The interactive observatory in
-# site/app/ needs the local server (`./pharos serve`) for its research and verification API,
-# so it stays on your own computer and is never deployed.
+# Only the generated pages (`python3 src/build_site.py --list`) and site/style.css are published.
+# The interactive observatory in site/app/ needs the local server (`./pharos serve`) for its
+# research and verification API, so it stays on your own computer and is never deployed.
 name: pages
 
 on:
   push:
     branches: [main]
-    paths: ['site/index.html', 'site/style.css', '.github/workflows/pages.yml']
+    paths: ['site/index.html', 'site/es/index.html', 'site/de/index.html', 'site/pt/index.html',
+            'site/style.css', '.github/workflows/pages.yml']
   workflow_dispatch:
 
 permissions:
@@ -28,7 +32,7 @@ concurrency:
 
 jobs:
   gate:
-    name: page checks (pinned figures, overstatement, site tests)
+    name: page checks (fresh build, pinned figures, overstatement, site tests)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -38,6 +42,7 @@ jobs:
           python-version: '3.12'
       - name: re-run the page's own checks
         run: |
+          python3 src/build_site.py
           python3 src/audit_counts.py
           python3 src/audit_overstatement.py
           python3 -m unittest discover -s tests -p 'test_site.py' -v
@@ -56,11 +61,18 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: stage only the landing page
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: stage only the landing pages
         run: |
           mkdir -p _site
-          cp site/index.html site/style.css _site/
-          ls -la _site
+          cp site/style.css _site/
+          for page in $(python3 src/build_site.py --list); do
+            mkdir -p "_site/$(dirname "$page")"
+            cp "site/$page" "_site/$page"
+          done
+          find _site -type f | sort
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
