@@ -1,5 +1,6 @@
 # Science Against Authoritarianism
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24502868.svg)](https://doi.org/10.5281/zenodo.24502868)
 [![verify: offline · deterministic](https://img.shields.io/badge/verify-make%20verify--offline%20%C2%B7%20local%20hooks-brightgreen.svg)](docs/VERIFYING.md)
 [![tests: offline · 7 audits](https://img.shields.io/badge/tests-offline%20%C2%B7%207%20audits-brightgreen.svg)](docs/VERIFYING.md)
 [![Content: CC BY-SA 4.0](https://img.shields.io/badge/Content-CC%20BY--SA%204.0-orange.svg)](LICENSES/CC-BY-SA-4.0.txt)
