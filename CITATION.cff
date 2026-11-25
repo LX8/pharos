@@ -56,3 +56,12 @@ keywords:
   - "UCDP"
   - "GDELT"
   - "computational social science"
+
+doi: "10.5281/zenodo.24502868"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24502867"
+    description: "Zenodo concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.24502868"
+    description: "Zenodo archive for Pharos release v0.7.0"
